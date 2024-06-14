@@ -1,0 +1,4 @@
+build
+.vscode
+default_scene.h
+test_cmp.cpp
