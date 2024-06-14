@@ -1,0 +1,36 @@
+\hypertarget{game__object_8h_source}{}\doxysection{game\+\_\+object.\+h}
+\label{game__object_8h_source}\index{engine/include/game\_object.h@{engine/include/game\_object.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef GAME\_OBJECT\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define GAME\_OBJECT\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <memory>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <typeinfo>}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{keyword}{class }\mbox{\hyperlink{classTransform}{Transform}};}
+\DoxyCodeLine{9 \textcolor{keyword}{class }\mbox{\hyperlink{classComponent}{Component}};}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{15 \textcolor{keyword}{class }\mbox{\hyperlink{classGameObject}{GameObject}} \{}
+\DoxyCodeLine{16 \textcolor{keyword}{public}:}
+\DoxyCodeLine{17     \mbox{\hyperlink{classGameObject}{GameObject}}* \mbox{\hyperlink{classGameObject_a4113a496ed45ca90756cfa0d8dfe6171}{parent}};}
+\DoxyCodeLine{18     std::vector<std::unique\_ptr<Component>> \mbox{\hyperlink{classGameObject_ae66e3cc1ff948a0a7e6f0f7799e27d96}{components}};}
+\DoxyCodeLine{19     std::vector<std::unique\_ptr<GameObject>> \mbox{\hyperlink{classGameObject_a40a3e73fcf5af36917f15beff9320b7d}{children}};}
+\DoxyCodeLine{20     \mbox{\hyperlink{classTransform}{Transform}}* \mbox{\hyperlink{classGameObject_a9edf603be120d5a9221e5c5c962465f8}{transform}};}
+\DoxyCodeLine{21     \textcolor{keywordtype}{void} \mbox{\hyperlink{classGameObject_adad7d284b670db722a2fda8e6a7997e3}{update}}();}
+\DoxyCodeLine{27     \textcolor{keywordtype}{void} \mbox{\hyperlink{classGameObject_a150c3be6961d9d5a78d5405d8a395e67}{remove\_cmp}}(\mbox{\hyperlink{classComponent}{Component}}* cmp); }
+\DoxyCodeLine{32     \mbox{\hyperlink{classGameObject_a0348e3ee2e83d56eafca7a3547f432c4}{GameObject}}();}
+\DoxyCodeLine{38     \mbox{\hyperlink{classGameObject_a0348e3ee2e83d56eafca7a3547f432c4}{GameObject}}(\mbox{\hyperlink{classGameObject}{GameObject}}* \mbox{\hyperlink{classGameObject_a4113a496ed45ca90756cfa0d8dfe6171}{parent}});}
+\DoxyCodeLine{43     \mbox{\hyperlink{classGameObject_ab82dfdb656f9051c0587e6593b2dda97}{\string~GameObject}}();}
+\DoxyCodeLine{44 \};}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{49 \textcolor{keyword}{class }\mbox{\hyperlink{classComponent}{Component}} \{}
+\DoxyCodeLine{50 \textcolor{keyword}{public}:}
+\DoxyCodeLine{51     \mbox{\hyperlink{classGameObject}{GameObject}}* \mbox{\hyperlink{classComponent_a3af8d9227f74082452f5052f55ea18a5}{go}};}
+\DoxyCodeLine{52     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} update() \{\}; }
+\DoxyCodeLine{58     \mbox{\hyperlink{classComponent_ae527ef1a4d1be744d50e2676a6c4f5f6}{Component}}(\mbox{\hyperlink{classGameObject}{GameObject}}* \mbox{\hyperlink{classComponent_a3af8d9227f74082452f5052f55ea18a5}{go}});}
+\DoxyCodeLine{59 \};}
+\DoxyCodeLine{60 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

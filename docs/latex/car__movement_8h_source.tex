@@ -1,0 +1,33 @@
+\hypertarget{car__movement_8h_source}{}\doxysection{car\+\_\+movement.\+h}
+\label{car__movement_8h_source}\index{engine/include/components/car/car\_movement.h@{engine/include/components/car/car\_movement.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef CAR\_MOVEMENT\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define CAR\_MOVEMENT\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}game\_object.h"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}components/force.h"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}components/car/car\_conf.h"{}}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}components/road\_check.h"{}}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <SFML/Graphics.hpp>}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{keyword}{class }\mbox{\hyperlink{classCarMovement}{CarMovement}} : \textcolor{keyword}{public} \mbox{\hyperlink{classComponent}{Component}} \{}
+\DoxyCodeLine{11 \textcolor{keyword}{private}:}
+\DoxyCodeLine{12     sf::Vector2f* vdeceleration, * vacceleration;}
+\DoxyCodeLine{13     sf::Vector2f direction;}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{keyword}{public}:}
+\DoxyCodeLine{16     \mbox{\hyperlink{classCarMovement}{CarMovement}}(\mbox{\hyperlink{classGameObject}{GameObject}}* \mbox{\hyperlink{classComponent_a3af8d9227f74082452f5052f55ea18a5}{go}}, \mbox{\hyperlink{classForce}{Force}}* force, \mbox{\hyperlink{structCarConf}{CarConf}} conf, }
+\DoxyCodeLine{17         \mbox{\hyperlink{classRoadCheck}{RoadCheck}}* checker);}
+\DoxyCodeLine{18     \mbox{\hyperlink{structCarConf}{CarConf}} conf;}
+\DoxyCodeLine{19     \textcolor{keywordtype}{bool} decelerate\{ \textcolor{keyword}{false} \}, move\{ \textcolor{keyword}{false} \};}
+\DoxyCodeLine{20     \textcolor{keywordtype}{void} set\_dir(sf::Vector2f dir);}
+\DoxyCodeLine{21     sf::Vector2f get\_dir();}
+\DoxyCodeLine{22     \textcolor{keywordtype}{void} update() \textcolor{keyword}{override};}
+\DoxyCodeLine{23     \mbox{\hyperlink{classForce}{Force}}* force;}
+\DoxyCodeLine{24     \mbox{\hyperlink{classRoadCheck}{RoadCheck}}* checker;}
+\DoxyCodeLine{25 \};}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

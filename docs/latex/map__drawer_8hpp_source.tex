@@ -1,0 +1,40 @@
+\hypertarget{map__drawer_8hpp_source}{}\doxysection{map\+\_\+drawer.\+hpp}
+\label{map__drawer_8hpp_source}\index{engine/include/components/map\_drawer.hpp@{engine/include/components/map\_drawer.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef MAP\_DRAWER\_HPP}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define MAP\_DRAWER\_HPP}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}game\_object.hpp"{}}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <jsoncpp/json/json.h>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <SFML/Graphics.hpp>}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{15 \textcolor{keyword}{class }\mbox{\hyperlink{classMapCoords}{MapCoords}} \{}
+\DoxyCodeLine{16 \textcolor{keyword}{public}:}
+\DoxyCodeLine{22     \mbox{\hyperlink{classMapCoords_a4512816f6b93d6f1d2ced7936e1fea40}{MapCoords}}(std::string path\_to\_json);}
+\DoxyCodeLine{23     std::vector<sf::Vector2f> \mbox{\hyperlink{classMapCoords_ae4204ad9ec6fe77cb195dadf6f78b29d}{points}};}
+\DoxyCodeLine{29     Json::Value \mbox{\hyperlink{classMapCoords_a62c0721cb0625dc850db8ebcc99817cf}{to\_json}}();}
+\DoxyCodeLine{33     \textcolor{keywordtype}{void} \mbox{\hyperlink{classMapCoords_a102d51fb5481adb33c771ba37bf49844}{save}}();}
+\DoxyCodeLine{37     \textcolor{keywordtype}{void} \mbox{\hyperlink{classMapCoords_a41205c15ce29345474e6d7df482ce722}{push\_back}}(sf::Vector2f v);}
+\DoxyCodeLine{42     \mbox{\hyperlink{classMapCoords_ae35ad00246659c2cc29a05f977ac3e3a}{\string~MapCoords}}();}
+\DoxyCodeLine{43 \textcolor{keyword}{private}:}
+\DoxyCodeLine{44     std::string path\_to\_json;}
+\DoxyCodeLine{45 \};}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{52 \textcolor{keyword}{class }\mbox{\hyperlink{classMapDrawer}{MapDrawer}} : \textcolor{keyword}{public} \mbox{\hyperlink{classComponent}{Component}} \{}
+\DoxyCodeLine{53 \textcolor{keyword}{public}:}
+\DoxyCodeLine{62     \mbox{\hyperlink{classMapDrawer_aace55676992041c76218b43b637484c0}{MapDrawer}}(\mbox{\hyperlink{classGameObject}{GameObject}}* \mbox{\hyperlink{classComponent_a3af8d9227f74082452f5052f55ea18a5}{go}},}
+\DoxyCodeLine{63         std::string path\_to\_json, \textcolor{keywordtype}{bool} \mbox{\hyperlink{classMapDrawer_a190a0d9ac3110185ba8a0cdffccacb83}{write}},}
+\DoxyCodeLine{64         sf::PrimitiveType \mbox{\hyperlink{classMapDrawer_a09208bbc33a963d0e08d8c924c4102f2}{draw\_mode}});}
+\DoxyCodeLine{68     \textcolor{keywordtype}{void} \mbox{\hyperlink{classMapDrawer_a02d8267cb9a56586c9bdb256629252c3}{update}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{69     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classMapDrawer_a190a0d9ac3110185ba8a0cdffccacb83}{write}};}
+\DoxyCodeLine{70     \mbox{\hyperlink{classMapCoords}{MapCoords}} \mbox{\hyperlink{classMapDrawer_a7131e57bae23fb5f0d4f73bb4d0d9ad1}{coords}};}
+\DoxyCodeLine{74     \textcolor{keywordtype}{void} \mbox{\hyperlink{classMapDrawer_ac626ccb1ec6b6c7e6535dcd7d3daba04}{draw}}();}
+\DoxyCodeLine{75     sf::PrimitiveType \mbox{\hyperlink{classMapDrawer_a09208bbc33a963d0e08d8c924c4102f2}{draw\_mode}};}
+\DoxyCodeLine{76 \};}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{78 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

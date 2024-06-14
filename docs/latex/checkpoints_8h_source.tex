@@ -1,0 +1,39 @@
+\hypertarget{checkpoints_8h_source}{}\doxysection{checkpoints.\+h}
+\label{checkpoints_8h_source}\index{engine/include/components/checkpoints.h@{engine/include/components/checkpoints.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef CHECKPOINTS\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define CHECKPOINTS\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}game\_object.h"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}components/map\_drawer.h"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}components/transform.h"{}}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <SFML/Graphics.hpp>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}utils.h"{}}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{14 \textcolor{keyword}{struct }\mbox{\hyperlink{structCheckpoint}{Checkpoint}} \{}
+\DoxyCodeLine{15     \textcolor{keywordtype}{bool} \mbox{\hyperlink{structCheckpoint_ae2891adcc8194f497cc8807f67e2ecf2}{crossed}}\{ \textcolor{keyword}{false} \};}
+\DoxyCodeLine{16     \mbox{\hyperlink{structline}{line}} \mbox{\hyperlink{structCheckpoint_a3475f46b1aac95a81cb64c3a10bff555}{l}};}
+\DoxyCodeLine{23     \mbox{\hyperlink{structCheckpoint_aa609c0ae3371617809536e9f05c2afbf}{Checkpoint}}(sf::Vector2f a, sf::Vector2f b);}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{30     \textcolor{keywordtype}{void} \mbox{\hyperlink{structCheckpoint_a2508473340eedc2f3216a00514547f5b}{check\_if\_crossing}}(\mbox{\hyperlink{structline}{line}}\& car);}
+\DoxyCodeLine{31 \};}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{38 \textcolor{keyword}{class }\mbox{\hyperlink{classLoopCounter}{LoopCounter}} : \textcolor{keyword}{public} \mbox{\hyperlink{classComponent}{Component}} \{}
+\DoxyCodeLine{39 \textcolor{keyword}{private}:}
+\DoxyCodeLine{40     std::vector<Checkpoint> checkpoints;}
+\DoxyCodeLine{41     \mbox{\hyperlink{classTransform}{Transform}}* car\_transform;}
+\DoxyCodeLine{42     \textcolor{keywordtype}{float} line\_size;}
+\DoxyCodeLine{43 \textcolor{keyword}{public}:}
+\DoxyCodeLine{44     \textcolor{keywordtype}{int} \mbox{\hyperlink{classLoopCounter_a83b680830f88ed866bd628d9d8878d73}{points}}\{ 0 \};}
+\DoxyCodeLine{45     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classLoopCounter_a8a55084a1b3395acae1fda951edfea27}{draw\_car\_line}};}
+\DoxyCodeLine{55     \mbox{\hyperlink{classLoopCounter_a85d314f6d49cb580631b483454b998e2}{LoopCounter}}(\mbox{\hyperlink{classGameObject}{GameObject}}* \mbox{\hyperlink{classComponent_a3af8d9227f74082452f5052f55ea18a5}{go}},}
+\DoxyCodeLine{56         std::vector<sf::Vector2f> checkpoint\_coords,}
+\DoxyCodeLine{57         \mbox{\hyperlink{classTransform}{Transform}}* car\_transform, \textcolor{keywordtype}{float} line\_size,}
+\DoxyCodeLine{58         \textcolor{keywordtype}{bool} \mbox{\hyperlink{classLoopCounter_a8a55084a1b3395acae1fda951edfea27}{draw\_car\_line}});}
+\DoxyCodeLine{62     \textcolor{keywordtype}{void} \mbox{\hyperlink{classLoopCounter_adecdb1453059726f49c25a9c01364b45}{update}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{63 \};}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{65 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

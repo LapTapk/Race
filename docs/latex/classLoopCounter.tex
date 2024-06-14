@@ -1,0 +1,88 @@
+\hypertarget{classLoopCounter}{}\doxysection{Loop\+Counter Class Reference}
+\label{classLoopCounter}\index{LoopCounter@{LoopCounter}}
+
+
+{\ttfamily \#include $<$checkpoints.\+hpp$>$}
+
+
+
+Inheritance diagram for Loop\+Counter\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=158pt]{classLoopCounter__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Loop\+Counter\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=335pt]{classLoopCounter__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classLoopCounter_a68d059642ce1368a0a1bbaab9ca9a015}{Loop\+Counter}} (\mbox{\hyperlink{classGameObject}{Game\+Object}} $\ast$\mbox{\hyperlink{classComponent_a3af8d9227f74082452f5052f55ea18a5}{go}}, std\+::vector$<$ sf\+::\+Vector2f $>$ checkpoint\+\_\+coords, \mbox{\hyperlink{classTransform}{Transform}} $\ast$car\+\_\+transform, float line\+\_\+size, bool \mbox{\hyperlink{classLoopCounter_a8a55084a1b3395acae1fda951edfea27}{draw\+\_\+car\+\_\+line}}, \mbox{\hyperlink{classTextRenderer}{Text\+Renderer}} $\ast$rend)
+\item 
+void \mbox{\hyperlink{classLoopCounter_adecdb1453059726f49c25a9c01364b45}{update}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classLoopCounter_a83b680830f88ed866bd628d9d8878d73}\label{classLoopCounter_a83b680830f88ed866bd628d9d8878d73}} 
+int {\bfseries points} \{ 0 \}
+\begin{DoxyCompactList}\small\item\em Количество очков \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classLoopCounter_a8a55084a1b3395acae1fda951edfea27}\label{classLoopCounter_a8a55084a1b3395acae1fda951edfea27}} 
+bool {\bfseries draw\+\_\+car\+\_\+line}
+\begin{DoxyCompactList}\small\item\em Состояние, которое будет определять, будет ли рисоваться на экране линия машины \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Компонент, отвечающий за подсчет пройденных кругов. Рисует линию машины, с помощью которой будет осуществляться проверка пересения контрольных линий. Выводит количество точек на экран. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classLoopCounter_a68d059642ce1368a0a1bbaab9ca9a015}\label{classLoopCounter_a68d059642ce1368a0a1bbaab9ca9a015}} 
+\index{LoopCounter@{LoopCounter}!LoopCounter@{LoopCounter}}
+\index{LoopCounter@{LoopCounter}!LoopCounter@{LoopCounter}}
+\doxysubsubsection{\texorpdfstring{LoopCounter()}{LoopCounter()}}
+{\footnotesize\ttfamily Loop\+Counter\+::\+Loop\+Counter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classGameObject}{Game\+Object}} $\ast$}]{go,  }\item[{std\+::vector$<$ sf\+::\+Vector2f $>$}]{checkpoint\+\_\+coords,  }\item[{\mbox{\hyperlink{classTransform}{Transform}} $\ast$}]{car\+\_\+transform,  }\item[{float}]{line\+\_\+size,  }\item[{bool}]{draw\+\_\+car\+\_\+line,  }\item[{\mbox{\hyperlink{classTextRenderer}{Text\+Renderer}} $\ast$}]{rend }\end{DoxyParamCaption})}
+
+Конструктор \mbox{\hyperlink{classLoopCounter}{Loop\+Counter}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em go} & Родительский объект \\
+\hline
+{\em checkpoint\+\_\+coords} & Координаты начал и концов контрольных линий, начало и конец линии должны идти подряд \\
+\hline
+{\em car\+\_\+transform} & Tranform машины \\
+\hline
+{\em line\+\_\+size} & Длина линии машины \\
+\hline
+{\em draw\+\_\+car\+\_\+line} & Состояние, которое будет определять, будет ли рисоваться на экране линия машиныe \\
+\hline
+{\em rend} & Поле rend \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classLoopCounter_adecdb1453059726f49c25a9c01364b45}\label{classLoopCounter_adecdb1453059726f49c25a9c01364b45}} 
+\index{LoopCounter@{LoopCounter}!update@{update}}
+\index{update@{update}!LoopCounter@{LoopCounter}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Loop\+Counter\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Функция счета кадра 
+
+Reimplemented from \mbox{\hyperlink{classComponent}{Component}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+engine/include/components/checkpoints.\+hpp\item 
+engine/src/components/checkpoints.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,21 @@
+\hypertarget{movement_8h_source}{}\doxysection{movement.\+h}
+\label{movement_8h_source}\index{engine/include/components/movement.h@{engine/include/components/movement.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef MOVER\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define MOVER\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <SFML/Graphics.hpp>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}game\_object.h"{}}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{keyword}{class }\mbox{\hyperlink{classMovement}{Movement}} : \textcolor{keyword}{public} \mbox{\hyperlink{classComponent}{Component}} \{}
+\DoxyCodeLine{8 \textcolor{keyword}{public}:}
+\DoxyCodeLine{9     \textcolor{keywordtype}{void} update() \textcolor{keyword}{override};}
+\DoxyCodeLine{10     \mbox{\hyperlink{classMovement}{Movement}}(\mbox{\hyperlink{classGameObject}{GameObject}}* \mbox{\hyperlink{classComponent_a3af8d9227f74082452f5052f55ea18a5}{go}});}
+\DoxyCodeLine{11     sf::Vector2f vector\{sf::Vector2f\{0, 0\}\};}
+\DoxyCodeLine{12     \textcolor{keywordtype}{void} set\_vector(sf::Vector2f dir, \textcolor{keywordtype}{float} speed);}
+\DoxyCodeLine{13 \};}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

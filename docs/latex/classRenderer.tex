@@ -1,0 +1,86 @@
+\hypertarget{classRenderer}{}\doxysection{Renderer Class Reference}
+\label{classRenderer}\index{Renderer@{Renderer}}
+
+
+{\ttfamily \#include $<$renderer.\+hpp$>$}
+
+
+
+Inheritance diagram for Renderer\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=153pt]{classRenderer__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Renderer\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{classRenderer__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classRenderer_a987698c953cb7b7188515d028e5dd1f8}{Renderer}} (\mbox{\hyperlink{classGameObject}{Game\+Object}} $\ast$\mbox{\hyperlink{classComponent_a3af8d9227f74082452f5052f55ea18a5}{go}}, std\+::string path\+\_\+to\+\_\+img)
+\item 
+void \mbox{\hyperlink{classRenderer_aeb5373caa5035e9ff2b9d9f4103712ea}{update}} () override
+\item 
+\mbox{\Hypertarget{classRenderer_a7f0f6474cab3cf76d80bdd2e7f477a4d}\label{classRenderer_a7f0f6474cab3cf76d80bdd2e7f477a4d}} 
+float {\bfseries rotation} ()
+\item 
+\mbox{\Hypertarget{classRenderer_ae3e09d8c6722cf88a2ea2259a89104ed}\label{classRenderer_ae3e09d8c6722cf88a2ea2259a89104ed}} 
+sf\+::\+Vector2f {\bfseries position} ()
+\item 
+\mbox{\Hypertarget{classRenderer_a00424dcba053adeafbd66350543a719b}\label{classRenderer_a00424dcba053adeafbd66350543a719b}} 
+sf\+::\+Vector2f {\bfseries scale} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRenderer_af7ed774ad36cde6ec727ccc0bd5d0b6f}\label{classRenderer_af7ed774ad36cde6ec727ccc0bd5d0b6f}} 
+\mbox{\hyperlink{classCamera}{Camera}} $\ast$ {\bfseries camera}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Компонент, отвечающий за отрисовку спрайта SFML в игровом пространстве. Осуществляет обработку спрайта в соотвествии с параметрами \mbox{\hyperlink{classTransform}{Transform}} 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classRenderer_a987698c953cb7b7188515d028e5dd1f8}\label{classRenderer_a987698c953cb7b7188515d028e5dd1f8}} 
+\index{Renderer@{Renderer}!Renderer@{Renderer}}
+\index{Renderer@{Renderer}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{Renderer()}{Renderer()}}
+{\footnotesize\ttfamily Renderer\+::\+Renderer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classGameObject}{Game\+Object}} $\ast$}]{go,  }\item[{std\+::string}]{path\+\_\+to\+\_\+img }\end{DoxyParamCaption})}
+
+Конструктор \mbox{\hyperlink{classRenderer}{Renderer}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em go} & Родительский объект \\
+\hline
+{\em path\+\_\+to\+\_\+img} & Путь до изображения спрайта \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRenderer_aeb5373caa5035e9ff2b9d9f4103712ea}\label{classRenderer_aeb5373caa5035e9ff2b9d9f4103712ea}} 
+\index{Renderer@{Renderer}!update@{update}}
+\index{update@{update}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Renderer\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Функция обработки кадра 
+
+Reimplemented from \mbox{\hyperlink{classComponent}{Component}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+engine/include/components/renderer.\+hpp\item 
+engine/src/components/renderer.\+cpp\end{DoxyCompactItemize}

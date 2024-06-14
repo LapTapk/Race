@@ -1,0 +1,21 @@
+\hypertarget{movement_8hpp_source}{}\doxysection{movement.\+hpp}
+\label{movement_8hpp_source}\index{engine/include/components/movement.hpp@{engine/include/components/movement.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef MOVER\_HPP}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define MOVER\_HPP}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <SFML/Graphics.hpp>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}game\_object.hpp"{}}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{12 \textcolor{keyword}{class }\mbox{\hyperlink{classMovement}{Movement}} : \textcolor{keyword}{public} \mbox{\hyperlink{classComponent}{Component}} \{}
+\DoxyCodeLine{13 \textcolor{keyword}{public}:}
+\DoxyCodeLine{17     \textcolor{keywordtype}{void} \mbox{\hyperlink{classMovement_a5992b9d7eaad3b86ca0b67807afb62ae}{update}}() \textcolor{keyword}{override}; }
+\DoxyCodeLine{23     \mbox{\hyperlink{classMovement_a3677a6fa5184a2ad1c56ad6d5c89c5a9}{Movement}}(\mbox{\hyperlink{classGameObject}{GameObject}}* \mbox{\hyperlink{classComponent_a3af8d9227f74082452f5052f55ea18a5}{go}});}
+\DoxyCodeLine{24     sf::Vector2f \mbox{\hyperlink{classMovement_ae9cef5cad85e96420551400d75042e77}{vector}}\{sf::Vector2f\{0, 0\}\}; }
+\DoxyCodeLine{33     \textcolor{keywordtype}{void} \mbox{\hyperlink{classMovement_a1687d4707d9c0acdfc4d6b2c7a0bcc21}{set\_vector}}(sf::Vector2f dir, \textcolor{keywordtype}{float} speed);}
+\DoxyCodeLine{34 \};}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

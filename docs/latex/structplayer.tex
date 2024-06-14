@@ -1,0 +1,73 @@
+\hypertarget{structplayer}{}\doxysection{player Struct Reference}
+\label{structplayer}\index{player@{player}}
+
+
+\begin{quote}
+синхронизация подключенных клиентов для защиты общих данных от единовременного доступа несколькими потоками \end{quote}
+ 
+
+
+
+
+{\ttfamily \#include $<$server.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structplayer_a31028afdca0959f6efc538d93bf9caea}{player}} (std\+::shared\+\_\+ptr$<$ tcp\+::socket $>$ socket, int number)
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+Переменная определяющая готовность игрока \end{quote}
+\end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structplayer_a20be087c62580c9c84f7c9ab7fe65f3b}\label{structplayer_a20be087c62580c9c84f7c9ab7fe65f3b}} 
+int {\bfseries number\+\_\+}
+\item 
+\mbox{\Hypertarget{structplayer_a7dae018755a718d9b7e0b6cb714a45da}\label{structplayer_a7dae018755a718d9b7e0b6cb714a45da}} 
+std\+::shared\+\_\+ptr$<$ tcp\+::socket $>$ {\bfseries socket\+\_\+}
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+Номер игрока \end{quote}
+\end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structplayer_aac38e2069d6f15030552f11eeb6673f1}\label{structplayer_aac38e2069d6f15030552f11eeb6673f1}} 
+bool {\bfseries is\+\_\+ready\+\_\+}
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+Сокет игрока \end{quote}
+\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{quote}
+синхронизация подключенных клиентов для защиты общих данных от единовременного доступа несколькими потоками \end{quote}
+
+
+Структора, определяющая подключение и его номер Позволяет знать номер каждого игрока, в соответствии с его подключением 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structplayer_a31028afdca0959f6efc538d93bf9caea}\label{structplayer_a31028afdca0959f6efc538d93bf9caea}} 
+\index{player@{player}!player@{player}}
+\index{player@{player}!player@{player}}
+\doxysubsubsection{\texorpdfstring{player()}{player()}}
+{\footnotesize\ttfamily player\+::player (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ tcp\+::socket $>$}]{socket,  }\item[{int}]{number }\end{DoxyParamCaption})}
+
+
+
+\begin{quote}
+Переменная определяющая готовность игрока \end{quote}
+
+
+Конструктор структоры игрока
+
+
+\begin{DoxyParams}{Parameters}
+{\em socket} & Передаваемый указатель на сокет подключения \\
+\hline
+{\em number} & Порядковый номер подключения \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+server/server.\+hpp\item 
+server/server.\+cpp\end{DoxyCompactItemize}

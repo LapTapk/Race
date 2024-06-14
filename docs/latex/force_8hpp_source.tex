@@ -1,0 +1,22 @@
+\hypertarget{force_8hpp_source}{}\doxysection{force.\+hpp}
+\label{force_8hpp_source}\index{engine/include/components/force.hpp@{engine/include/components/force.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef FORCE\_HPP}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define FORCE\_HPP}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}game\_object.hpp"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}movement.hpp"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <SFML/Graphics.hpp>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{13 \textcolor{keyword}{class }\mbox{\hyperlink{classForce}{Force}} : \textcolor{keyword}{public} \mbox{\hyperlink{classMovement}{Movement}} \{}
+\DoxyCodeLine{14 \textcolor{keyword}{public}:}
+\DoxyCodeLine{15     std::vector<sf::Vector2f> \mbox{\hyperlink{classForce_a087ba46e8d779d615eb8603d074bb34c}{accelerations}};}
+\DoxyCodeLine{22     \mbox{\hyperlink{classForce_a38158ba6cd17fcba452eb1756cc586ca}{Force}}(\mbox{\hyperlink{classGameObject}{GameObject}}* \mbox{\hyperlink{classComponent_a3af8d9227f74082452f5052f55ea18a5}{go}});}
+\DoxyCodeLine{26     \textcolor{keywordtype}{void} \mbox{\hyperlink{classForce_a4fcd6417642d4ccbdc88948e27b86cc9}{update}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{27 \};}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

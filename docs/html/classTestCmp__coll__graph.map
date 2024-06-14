@@ -1,0 +1,6 @@
+<map id="TestCmp" name="TestCmp">
+<area shape="rect" id="node1" title=" " alt="" coords="5,81,84,108"/>
+<area shape="rect" id="node2" href="$classComponent.html" title=" " alt="" coords="103,5,200,32"/>
+<area shape="rect" id="node4" href="$classTransform.html" title=" " alt="" coords="108,81,195,108"/>
+<area shape="rect" id="node3" href="$classGameObject.html" title=" " alt="" coords="145,171,248,197"/>
+</map>

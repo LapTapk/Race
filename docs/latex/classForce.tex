@@ -1,0 +1,78 @@
+\hypertarget{classForce}{}\doxysection{Force Class Reference}
+\label{classForce}\index{Force@{Force}}
+
+
+{\ttfamily \#include $<$force.\+hpp$>$}
+
+
+
+Inheritance diagram for Force\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=166pt]{classForce__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Force\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=326pt]{classForce__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classForce_a38158ba6cd17fcba452eb1756cc586ca}{Force}} (\mbox{\hyperlink{classGameObject}{Game\+Object}} $\ast$\mbox{\hyperlink{classComponent_a3af8d9227f74082452f5052f55ea18a5}{go}})
+\item 
+void \mbox{\hyperlink{classForce_a4fcd6417642d4ccbdc88948e27b86cc9}{update}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classForce_a087ba46e8d779d615eb8603d074bb34c}\label{classForce_a087ba46e8d779d615eb8603d074bb34c}} 
+std\+::vector$<$ sf\+::\+Vector2f $>$ {\bfseries accelerations}
+\begin{DoxyCompactList}\small\item\em Список ускорений \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Компонент, прилагающий силу к объекту по формуле. Масса объекта не учитывается, только данное ускорение. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classForce_a38158ba6cd17fcba452eb1756cc586ca}\label{classForce_a38158ba6cd17fcba452eb1756cc586ca}} 
+\index{Force@{Force}!Force@{Force}}
+\index{Force@{Force}!Force@{Force}}
+\doxysubsubsection{\texorpdfstring{Force()}{Force()}}
+{\footnotesize\ttfamily Force\+::\+Force (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classGameObject}{Game\+Object}} $\ast$}]{go }\end{DoxyParamCaption})}
+
+Конструктор \mbox{\hyperlink{classForce}{Force}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em go} & Родительский объект \\
+\hline
+{\em mover} & Mover объекта \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classForce_a4fcd6417642d4ccbdc88948e27b86cc9}\label{classForce_a4fcd6417642d4ccbdc88948e27b86cc9}} 
+\index{Force@{Force}!update@{update}}
+\index{update@{update}!Force@{Force}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Force\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Функция счета кадра 
+
+Reimplemented from \mbox{\hyperlink{classComponent}{Component}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+engine/include/components/force.\+hpp\item 
+engine/src/components/force.\+cpp\end{DoxyCompactItemize}

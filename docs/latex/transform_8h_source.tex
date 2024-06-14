@@ -1,0 +1,26 @@
+\hypertarget{transform_8h_source}{}\doxysection{transform.\+h}
+\label{transform_8h_source}\index{engine/include/components/transform.h@{engine/include/components/transform.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef TRANSFORM\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define TRANSFORM\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <SFML/Graphics.hpp>}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}game\_object.h"{}}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{keyword}{class }\mbox{\hyperlink{classTransform}{Transform}} : \textcolor{keyword}{public} \mbox{\hyperlink{classComponent}{Component}} \{}
+\DoxyCodeLine{9 \textcolor{keyword}{public}:}
+\DoxyCodeLine{10     sf::Vector2f position = sf::Vector2f(0, 0);}
+\DoxyCodeLine{11     sf::Vector2f global\_pos();}
+\DoxyCodeLine{12     sf::Vector2f scale = sf::Vector2f(1, 1);}
+\DoxyCodeLine{13     sf::Vector2f global\_scale();}
+\DoxyCodeLine{14     \textcolor{keywordtype}{float} rotation = 0;}
+\DoxyCodeLine{15     \textcolor{keywordtype}{float} global\_rot();}
+\DoxyCodeLine{16     \mbox{\hyperlink{classTransform}{Transform}}(\mbox{\hyperlink{classGameObject}{GameObject}}* \mbox{\hyperlink{classComponent_a3af8d9227f74082452f5052f55ea18a5}{go}});}
+\DoxyCodeLine{17     sf::Vector2f forward();}
+\DoxyCodeLine{18 \};}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

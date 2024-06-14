@@ -1,0 +1,74 @@
+\hypertarget{structCheckpoint}{}\doxysection{Checkpoint Struct Reference}
+\label{structCheckpoint}\index{Checkpoint@{Checkpoint}}
+
+
+{\ttfamily \#include $<$checkpoints.\+hpp$>$}
+
+
+
+Collaboration diagram for Checkpoint\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=151pt]{structCheckpoint__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structCheckpoint_aa609c0ae3371617809536e9f05c2afbf}{Checkpoint}} (sf\+::\+Vector2f a, sf\+::\+Vector2f b)
+\item 
+bool \mbox{\hyperlink{structCheckpoint_a69d85c6a67c062535feec77123d36f79}{check\+\_\+if\+\_\+crossing}} (\mbox{\hyperlink{structline}{line}} \&car)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structCheckpoint_ae2891adcc8194f497cc8807f67e2ecf2}\label{structCheckpoint_ae2891adcc8194f497cc8807f67e2ecf2}} 
+bool {\bfseries crossed} \{ false \}
+\begin{DoxyCompactList}\small\item\em Состояние, показывающее, была ли пересечена линия \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structCheckpoint_a3475f46b1aac95a81cb64c3a10bff555}\label{structCheckpoint_a3475f46b1aac95a81cb64c3a10bff555}} 
+\mbox{\hyperlink{structline}{line}} {\bfseries l}
+\begin{DoxyCompactList}\small\item\em Контрольная линия \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Структура, отвечающая за хранение информации о контрольных линиях 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structCheckpoint_aa609c0ae3371617809536e9f05c2afbf}\label{structCheckpoint_aa609c0ae3371617809536e9f05c2afbf}} 
+\index{Checkpoint@{Checkpoint}!Checkpoint@{Checkpoint}}
+\index{Checkpoint@{Checkpoint}!Checkpoint@{Checkpoint}}
+\doxysubsubsection{\texorpdfstring{Checkpoint()}{Checkpoint()}}
+{\footnotesize\ttfamily Checkpoint\+::\+Checkpoint (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{a,  }\item[{sf\+::\+Vector2f}]{b }\end{DoxyParamCaption})}
+
+Конструктор \mbox{\hyperlink{structCheckpoint}{Checkpoint}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & Точка начала линии \\
+\hline
+{\em b} & Точка конца линии \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structCheckpoint_a69d85c6a67c062535feec77123d36f79}\label{structCheckpoint_a69d85c6a67c062535feec77123d36f79}} 
+\index{Checkpoint@{Checkpoint}!check\_if\_crossing@{check\_if\_crossing}}
+\index{check\_if\_crossing@{check\_if\_crossing}!Checkpoint@{Checkpoint}}
+\doxysubsubsection{\texorpdfstring{check\_if\_crossing()}{check\_if\_crossing()}}
+{\footnotesize\ttfamily bool Checkpoint\+::check\+\_\+if\+\_\+crossing (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structline}{line}} \&}]{car }\end{DoxyParamCaption})}
+
+Функция, проверяющая, была ли пересечена линия
+
+
+\begin{DoxyParams}{Parameters}
+{\em car} & Линия машины \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+engine/include/components/checkpoints.\+hpp\item 
+engine/src/components/checkpoints.\+cpp\end{DoxyCompactItemize}

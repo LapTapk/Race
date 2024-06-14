@@ -1,0 +1,93 @@
+\hypertarget{classMovement}{}\doxysection{Movement Class Reference}
+\label{classMovement}\index{Movement@{Movement}}
+
+
+{\ttfamily \#include $<$movement.\+hpp$>$}
+
+
+
+Inheritance diagram for Movement\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=166pt]{classMovement__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Movement\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=325pt]{classMovement__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classMovement_a5992b9d7eaad3b86ca0b67807afb62ae}{update}} () override
+\item 
+\mbox{\hyperlink{classMovement_a3677a6fa5184a2ad1c56ad6d5c89c5a9}{Movement}} (\mbox{\hyperlink{classGameObject}{Game\+Object}} $\ast$\mbox{\hyperlink{classComponent_a3af8d9227f74082452f5052f55ea18a5}{go}})
+\item 
+void \mbox{\hyperlink{classMovement_a1687d4707d9c0acdfc4d6b2c7a0bcc21}{set\+\_\+vector}} (sf\+::\+Vector2f dir, float speed)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classMovement_ae9cef5cad85e96420551400d75042e77}\label{classMovement_ae9cef5cad85e96420551400d75042e77}} 
+sf\+::\+Vector2f {\bfseries vector} \{sf\+::\+Vector2f\{0, 0\}\}
+\begin{DoxyCompactList}\small\item\em Вектор передвижения в данном кадре \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Компонент, отвечающий за передвижение объекта в игровом пространстве посредством телепортации его на вектор vector 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classMovement_a3677a6fa5184a2ad1c56ad6d5c89c5a9}\label{classMovement_a3677a6fa5184a2ad1c56ad6d5c89c5a9}} 
+\index{Movement@{Movement}!Movement@{Movement}}
+\index{Movement@{Movement}!Movement@{Movement}}
+\doxysubsubsection{\texorpdfstring{Movement()}{Movement()}}
+{\footnotesize\ttfamily Movement\+::\+Movement (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classGameObject}{Game\+Object}} $\ast$}]{go }\end{DoxyParamCaption})}
+
+Конструктор \mbox{\hyperlink{classMovement}{Movement}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em go} & Родительский объект \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classMovement_a1687d4707d9c0acdfc4d6b2c7a0bcc21}\label{classMovement_a1687d4707d9c0acdfc4d6b2c7a0bcc21}} 
+\index{Movement@{Movement}!set\_vector@{set\_vector}}
+\index{set\_vector@{set\_vector}!Movement@{Movement}}
+\doxysubsubsection{\texorpdfstring{set\_vector()}{set\_vector()}}
+{\footnotesize\ttfamily void Movement\+::set\+\_\+vector (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{dir,  }\item[{float}]{speed }\end{DoxyParamCaption})}
+
+Функция установления vector. Параметр dir приводится к единичному вектору и умножается на speed
+
+
+\begin{DoxyParams}{Parameters}
+{\em dir} & Вектор направления, необазятельно единичный \\
+\hline
+{\em speed} & Длина вектора передвижения \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classMovement_a5992b9d7eaad3b86ca0b67807afb62ae}\label{classMovement_a5992b9d7eaad3b86ca0b67807afb62ae}} 
+\index{Movement@{Movement}!update@{update}}
+\index{update@{update}!Movement@{Movement}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Movement\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Функция обработки кадра 
+
+Reimplemented from \mbox{\hyperlink{classComponent}{Component}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+engine/include/components/movement.\+hpp\item 
+engine/src/components/mover.\+cpp\end{DoxyCompactItemize}

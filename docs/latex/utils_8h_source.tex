@@ -1,0 +1,26 @@
+\hypertarget{utils_8h_source}{}\doxysection{utils.\+h}
+\label{utils_8h_source}\index{engine/include/utils.h@{engine/include/utils.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#ifndef UTILS\_H}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#define UTILS\_H}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <SFML/Graphics.hpp>}}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{13 \textcolor{keyword}{struct }\mbox{\hyperlink{structline}{line}} \{}
+\DoxyCodeLine{14     sf::Vector2f a, b;}
+\DoxyCodeLine{15     \mbox{\hyperlink{structline}{line}}(sf::Vector2f a\_c, sf::Vector2f b\_c);}
+\DoxyCodeLine{16     \textcolor{keywordtype}{bool} ccw(sf::Vector2f a, sf::Vector2f b, sf::Vector2f c);}
+\DoxyCodeLine{17     \textcolor{keywordtype}{bool} are\_intersecting(\mbox{\hyperlink{structline}{line}}\& other);}
+\DoxyCodeLine{18 \};}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{27 \textcolor{keywordtype}{void} draw\_lines(std::vector<sf::Vector2f>\& coords,}
+\DoxyCodeLine{28     sf::PrimitiveType draw\_mode);}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{33 sf::Vector2f get\_mpos();}
+\DoxyCodeLine{37 \textcolor{keywordtype}{bool} called\_left\_click();}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

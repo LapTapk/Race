@@ -1,0 +1,23 @@
+\hypertarget{wheel__car__input_8h_source}{}\doxysection{wheel\+\_\+car\+\_\+input.\+h}
+\label{wheel__car__input_8h_source}\index{engine/include/components/car/car\_inputs/wheel\_car\_input.h@{engine/include/components/car/car\_inputs/wheel\_car\_input.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef WHEEL\_CAR\_INPUT\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define WHEEL\_CAR\_INPUT\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}game\_object.h"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}components/rotor.h"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}components/car/car\_movement.h"{}}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{keyword}{class }\mbox{\hyperlink{classWheelCarInput}{WheelCarInput}} : \textcolor{keyword}{public} \mbox{\hyperlink{classComponent}{Component}} \{}
+\DoxyCodeLine{9 \textcolor{keyword}{private}:}
+\DoxyCodeLine{10     \mbox{\hyperlink{classRotor}{Rotor}}* rotor;}
+\DoxyCodeLine{11     \mbox{\hyperlink{classCarMovement}{CarMovement}}* mover;}
+\DoxyCodeLine{12 \textcolor{keyword}{public}:}
+\DoxyCodeLine{13     \mbox{\hyperlink{classWheelCarInput}{WheelCarInput}}(\mbox{\hyperlink{classGameObject}{GameObject}}* \mbox{\hyperlink{classComponent_a3af8d9227f74082452f5052f55ea18a5}{go}}, \mbox{\hyperlink{classRotor}{Rotor}}* rotor, \mbox{\hyperlink{classCarMovement}{CarMovement}}* mover);}
+\DoxyCodeLine{14     \textcolor{keywordtype}{void} update() \textcolor{keyword}{override};}
+\DoxyCodeLine{15 \};}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

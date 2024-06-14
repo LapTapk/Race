@@ -7,20 +7,36 @@
 #include "components/road_check.hpp"
 #include <SFML/Graphics.hpp>
 
+/**
+ * Компонент, отвеючащий за движение, схожее
+ * с движением автомобиля
+ */
 class CarMovement : public Force {
 private:
-    sf::Vector2f* vdeceleration, * vacceleration;
-    sf::Vector2f direction;
+    sf::Vector2f* vdeceleration;///< Указатель на замедляющй вектор, само значение лежит в accelerations
+    sf::Vector2f* vacceleration;///< Указатель на ускоряющий вектор, само значение лежит в accelerations
+    sf::Vector2f direction;///< Направление движения
 
 public:
+    /**
+     * Конструктор CarMovement
+     * 
+     * @param go Родительский объект
+     * @param conf Конфигурация машины
+     * @param checker Элемент, проверяющий нахождение на дороге
+     */
     CarMovement(GameObject* go, CarConf conf, 
         RoadCheck* checker);
-    CarConf conf;
-    bool decelerate{ false }, move{ false };
-    void set_dir(sf::Vector2f dir);
-    sf::Vector2f get_dir();
+    CarConf conf;///< Конфигурация машины
+    bool decelerate{ false };///< Состояния, показывающее, необходимо ли замедлять машину
+    bool move{ false };///< Состояние, показывающее, необходимо ли начать движение
+    void set_dir(sf::Vector2f dir);///< Задать направление движения. Нормализует выданный вектор
+    sf::Vector2f get_dir();///< Получить вектор движения
+    /**
+     * Функция обработки кадра
+     */
     void update() override;
-    RoadCheck* checker;
+    RoadCheck* checker;///< Элемент, проверяющий нахождение на дороге
 };
 
 #endif

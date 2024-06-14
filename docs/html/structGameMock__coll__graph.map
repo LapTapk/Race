@@ -1,0 +1,10 @@
+<map id="GameMock" name="GameMock">
+<area shape="rect" id="node1" title=" " alt="" coords="290,247,386,273"/>
+<area shape="rect" id="node2" href="$classGame.html" title=" " alt="" coords="307,171,369,197"/>
+<area shape="rect" id="node3" href="$classCamera.html" title=" " alt="" coords="301,81,375,108"/>
+<area shape="rect" id="node4" href="$classComponent.html" title=" " alt="" coords="92,5,189,32"/>
+<area shape="rect" id="node6" href="$classTransform.html" title=" " alt="" coords="5,81,92,108"/>
+<area shape="rect" id="node5" href="$classGameObject.html" title=" " alt="" coords="44,171,147,197"/>
+<area shape="rect" id="node7" href="$classEventManager.html" title=" " alt="" coords="399,81,515,108"/>
+<area shape="rect" id="node8" href="$classGameConf.html" title=" " alt="" coords="186,81,277,108"/>
+</map>
