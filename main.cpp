@@ -43,6 +43,6 @@ int main() {
     create_defualt_scene(scene, camera, sio, cnt, ind);
     GameConf conf("../configs/conf.json");
     
-    Game game(conf, scene, camera, server_ip, port);
+    Game game(conf, scene, camera);
     game.run();
 }

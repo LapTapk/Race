@@ -1,4 +1,4 @@
-#include <doctest.h>
+#include "doctest.h"
 #include "game_object.hpp"
 
 namespace go_test {

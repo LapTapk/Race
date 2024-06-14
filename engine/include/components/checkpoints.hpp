@@ -5,6 +5,7 @@
 #include "components/map_drawer.hpp"
 #include "components/transform.hpp"
 #include <SFML/Graphics.hpp>
+#include "components/text_renderer.hpp"
 #include "utils.hpp"
 
 /**
@@ -27,19 +28,21 @@ struct Checkpoint {
      * 
      * @param car Линия машины
      */
-    void check_if_crossing(line& car);
+    bool check_if_crossing(line& car);
 };
 
 /**
  * Компонент, отвечающий за подсчет пройденных кругов.
  * Рисует линию машины, с помощью которой будет 
- * осуществляться проверка пересения контрольных линий
+ * осуществляться проверка пересения контрольных линий.
+ * Выводит количество точек на экран.
  */
 class LoopCounter : public Component {
 private:
     std::vector<Checkpoint> checkpoints;///< Контольные линии
     Transform* car_transform;///< Transform машины
     float line_size;///< Длина линии машины
+    TextRenderer* rend;///< Рендерер, с помощью которого точки будут выводиться на экран
 public:
     int points{ 0 };///< Количество очков
     bool draw_car_line;///< Состояние, которое будет определять, будет ли рисоваться на экране линия машины
@@ -51,11 +54,12 @@ public:
      * @param car_transform Tranform машины
      * @param line_size Длина линии машины
      * @param draw_car_line Состояние, которое будет определять, будет ли рисоваться на экране линия машиныe
+     * @param rend Поле rend
      */
     LoopCounter(GameObject* go,
         std::vector<sf::Vector2f> checkpoint_coords,
         Transform* car_transform, float line_size,
-        bool draw_car_line);
+        bool draw_car_line, TextRenderer* rend);
     /**
      * Функция счета кадра
      */

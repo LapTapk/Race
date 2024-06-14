@@ -5,8 +5,7 @@
 #include <chrono>
 #include <memory>
 
-Game::Game(GameConf conf_c, GameObject* scene_c, Camera* camera_c,
-    std::string server_ip_c, std::string port_c) :
+Game::Game(GameConf conf_c, GameObject* scene_c, Camera* camera_c) :
     conf{ conf_c },
     window{ sf::VideoMode{
             conf_c.window_size.first, conf_c.window_size.second
@@ -14,9 +13,7 @@ Game::Game(GameConf conf_c, GameObject* scene_c, Camera* camera_c,
     event_manager{},
     scene{ std::unique_ptr<GameObject>{scene_c} },
     camera{ camera_c },
-    clock{}, 
-    server_ip{server_ip_c}, 
-    port{port_c} {
+    clock{} { 
     if (instance != nullptr) {
         throw std::runtime_error{
             "There must be only one instance of class Game!"

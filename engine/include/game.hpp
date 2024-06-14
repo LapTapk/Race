@@ -22,8 +22,6 @@ public:
     EventManager event_manager;///< Обработчик событий ввода/вывода 
     GameConf conf;///< Начальные конфигурации игры
     bool running = false;///< Состояние, указывающее на то, запущена ли игрa
-    std::string server_ip;
-    std::string port;
     /**
      * Основная функция класса. Запускает покадровый подсчет.
     */
@@ -41,8 +39,7 @@ public:
      * @param scene Начальная сцена игры
      * @param camera Камера, принадлежащая scene
     */
-    Game(GameConf conf, GameObject* scene, Camera* camera,
-        std::string server_ip, std::string port);
+    Game(GameConf conf, GameObject* scene, Camera* camera);
     /**
      * Деструктор Game. Запускает деструктор сцены
     */

@@ -24,7 +24,7 @@ std::tuple<GameObject*, CarMovement*> create_car(GameObject* scene, Camera* came
     GameObject* car{ new GameObject{scene} };
     CarConf car_conf{ 500, 30, 1, 1, 0.1 };
     CarMovement* car_mover{ new CarMovement{car, car_conf, check} };
-    new Renderer{ car, "../assets/penguin.png" };
+    new Renderer{ car, "../assets/images/penguin.png" };
     car_mover->decelerate = false;
     return { car, car_mover };
 }
@@ -41,7 +41,7 @@ std::vector<GameObject*> create_cars(GameObject* scene, int cnt,
             GameObject* camera_go{ new GameObject{car} };
             camera = new Camera{ camera_go, 10 };
             GameObject* wheel{ new GameObject{car} };
-            new Renderer{ wheel, "../assets/wheel.png" };
+            new Renderer{ wheel, "../assets/images/wheel.png" };
             Rotor* rotor{ new Rotor{ wheel } };
             wheel->transform->position = sf::Vector2f{ 700, -700 };
             new WheelCarInput{ car, rotor, mover };
@@ -70,17 +70,26 @@ void create_defualt_scene(GameObject*& scene,
         }
     };
 
-    std::vector<GameObject*> cars = create_cars(scene, cnt, camera, check, ind);
+    std::vector<GameObject*> cars = create_cars(scene, cnt,
+        camera, check, ind);
     Client* client = new Client{ cars[ind], sio, ind, cars };
 
     MapDrawer* map_drawer3{ new MapDrawer{
         map_drawer_go, "../configs/map3.json", false, sf::Lines
     } };
 
+    GameObject* trend_go{ new GameObject{camera->go} };
+    trend_go->transform->position = sf::Vector2f{ 0, -1000 };
+    trend_go->transform->scale = sf::Vector2f{50, 50};
+    TextRenderer* trend{
+        new TextRenderer{trend_go, "../assets/fonts/Arial.ttf"}
+    };
+
     GameObject* checkpoints_go{ new GameObject{scene} };
     LoopCounter* checkpoints{ new LoopCounter{checkpoints_go,
      map_drawer3->coords.points,
-      cars[ind]->transform, 50, true} };
+      cars[ind]->transform, 50, true,
+      trend} };
 }
 
 #endif
