@@ -1,0 +1,6 @@
+{
+    "window_size": [600, 600],
+    "title": "Race",
+    "fps": 60,
+    "wheel_rot_delta": 100
+}
