@@ -1,0 +1,117 @@
+\hypertarget{classGame}{}\doxysection{Game Class Reference}
+\label{classGame}\index{Game@{Game}}
+
+
+{\ttfamily \#include $<$game.\+hpp$>$}
+
+
+
+Inheritance diagram for Game\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=152pt]{classGame__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Game\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGame__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classGame_a1ab78f5ed0d5ea879157357cf2fb2afa}{run}} ()
+\item 
+float \mbox{\hyperlink{classGame_a9a3f5fbc2421f295a0591d95044b74ee}{get\+\_\+delta\+\_\+time}} ()
+\item 
+\mbox{\hyperlink{classGame_a09bd9c2cc1910f570d019c02f06eecd9}{Game}} (\mbox{\hyperlink{classGameConf}{Game\+Conf}} \mbox{\hyperlink{classGame_a8ddb3360b68fae4ca85ad0fffeda4181}{conf}}, \mbox{\hyperlink{classGameObject}{Game\+Object}} $\ast$\mbox{\hyperlink{classGame_a7dea8fb1ea2f75390a9edf6e7476fe37}{scene}}, \mbox{\hyperlink{classCamera}{Camera}} $\ast$\mbox{\hyperlink{classGame_ad562c30c9b62c0d2249364a86a59246e}{camera}})
+\item 
+\mbox{\hyperlink{classGame_ae3d112ca6e0e55150d2fdbc704474530}{$\sim$\+Game}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGame_a7dea8fb1ea2f75390a9edf6e7476fe37}\label{classGame_a7dea8fb1ea2f75390a9edf6e7476fe37}} 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classGameObject}{Game\+Object}} $>$ {\bfseries scene}
+\begin{DoxyCompactList}\small\item\em Указатель на текущую сену \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGame_ad562c30c9b62c0d2249364a86a59246e}\label{classGame_ad562c30c9b62c0d2249364a86a59246e}} 
+\mbox{\hyperlink{classCamera}{Camera}} $\ast$ {\bfseries camera}
+\begin{DoxyCompactList}\small\item\em Указатель на основную камеру сцены \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGame_a223de215aeb661cd423ac145756cc730}\label{classGame_a223de215aeb661cd423ac145756cc730}} 
+sf\+::\+Render\+Window {\bfseries window}
+\begin{DoxyCompactList}\small\item\em Окно, в котором происходит отрисовка игры \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGame_af4b6cd82740287f2a0bc1028b0e62b0e}\label{classGame_af4b6cd82740287f2a0bc1028b0e62b0e}} 
+\mbox{\hyperlink{classEventManager}{Event\+Manager}} {\bfseries event\+\_\+manager}
+\begin{DoxyCompactList}\small\item\em Обработчик событий ввода/вывода \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGame_a8ddb3360b68fae4ca85ad0fffeda4181}\label{classGame_a8ddb3360b68fae4ca85ad0fffeda4181}} 
+\mbox{\hyperlink{classGameConf}{Game\+Conf}} {\bfseries conf}
+\begin{DoxyCompactList}\small\item\em Начальные конфигурации игры \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGame_a8ca5b9f8a62990e6022de17785beac2c}\label{classGame_a8ca5b9f8a62990e6022de17785beac2c}} 
+bool {\bfseries running} = false
+\begin{DoxyCompactList}\small\item\em Состояние, указывающее на то, запущена ли игрa. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGame_aa469cdc0a30f4fd2d6d99b23f4fbf257}\label{classGame_aa469cdc0a30f4fd2d6d99b23f4fbf257}} 
+static \mbox{\hyperlink{classGame}{Game}} $\ast$ {\bfseries instance} \{ nullptr \}
+\begin{DoxyCompactList}\small\item\em Синглтон \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Основной класс игры. Отвечает за глобальные состояния и покадровый подсчет. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classGame_a09bd9c2cc1910f570d019c02f06eecd9}\label{classGame_a09bd9c2cc1910f570d019c02f06eecd9}} 
+\index{Game@{Game}!Game@{Game}}
+\index{Game@{Game}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{Game()}{Game()}}
+{\footnotesize\ttfamily Game\+::\+Game (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classGameConf}{Game\+Conf}}}]{conf,  }\item[{\mbox{\hyperlink{classGameObject}{Game\+Object}} $\ast$}]{scene,  }\item[{\mbox{\hyperlink{classCamera}{Camera}} $\ast$}]{camera }\end{DoxyParamCaption})}
+
+Инициализатор класса
+
+
+\begin{DoxyParams}{Parameters}
+{\em conf} & Начальные конфигурации игры \\
+\hline
+{\em scene} & Начальная сцена игры \\
+\hline
+{\em camera} & Камера, принадлежащая scene \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classGame_ae3d112ca6e0e55150d2fdbc704474530}\label{classGame_ae3d112ca6e0e55150d2fdbc704474530}} 
+\index{Game@{Game}!````~Game@{$\sim$Game}}
+\index{````~Game@{$\sim$Game}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{$\sim$Game()}{~Game()}}
+{\footnotesize\ttfamily Game\+::$\sim$\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Деструктор \mbox{\hyperlink{classGame}{Game}}. Запускает деструктор сцены 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classGame_a9a3f5fbc2421f295a0591d95044b74ee}\label{classGame_a9a3f5fbc2421f295a0591d95044b74ee}} 
+\index{Game@{Game}!get\_delta\_time@{get\_delta\_time}}
+\index{get\_delta\_time@{get\_delta\_time}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{get\_delta\_time()}{get\_delta\_time()}}
+{\footnotesize\ttfamily float Game\+::get\+\_\+delta\+\_\+time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Геттер поля delta\+\_\+time
+
+\begin{DoxyReturn}{Returns}
+delta\+\_\+time 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGame_a1ab78f5ed0d5ea879157357cf2fb2afa}\label{classGame_a1ab78f5ed0d5ea879157357cf2fb2afa}} 
+\index{Game@{Game}!run@{run}}
+\index{run@{run}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void Game\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Основная функция класса. Запускает покадровый подсчет. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+engine/include/game.\+hpp\item 
+engine/src/game.\+cpp\end{DoxyCompactItemize}

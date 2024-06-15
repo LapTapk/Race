@@ -1,0 +1,37 @@
+\hypertarget{game_8hpp_source}{}\doxysection{game.\+hpp}
+\label{game_8hpp_source}\index{engine/include/game.hpp@{engine/include/game.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef GAME\_HPP}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define GAME\_HPP}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}event\_manager.hpp"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}game\_object.hpp"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}game\_conf.hpp"{}}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}components/camera.hpp"{}}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <SFML/Graphics.hpp>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <memory>}}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{16 \textcolor{keyword}{class }\mbox{\hyperlink{classGame}{Game}} \{}
+\DoxyCodeLine{17 \textcolor{keyword}{public}:}
+\DoxyCodeLine{18     \textcolor{keyword}{static} \mbox{\hyperlink{classGame}{Game}}* \mbox{\hyperlink{classGame_aa469cdc0a30f4fd2d6d99b23f4fbf257}{instance}}; }
+\DoxyCodeLine{19     std::unique\_ptr<GameObject> \mbox{\hyperlink{classGame_a7dea8fb1ea2f75390a9edf6e7476fe37}{scene}};}
+\DoxyCodeLine{20     \mbox{\hyperlink{classCamera}{Camera}}* \mbox{\hyperlink{classGame_ad562c30c9b62c0d2249364a86a59246e}{camera}};}
+\DoxyCodeLine{21     sf::RenderWindow \mbox{\hyperlink{classGame_a223de215aeb661cd423ac145756cc730}{window}};}
+\DoxyCodeLine{22     \mbox{\hyperlink{classEventManager}{EventManager}} \mbox{\hyperlink{classGame_af4b6cd82740287f2a0bc1028b0e62b0e}{event\_manager}};}
+\DoxyCodeLine{23     \mbox{\hyperlink{classGameConf}{GameConf}} \mbox{\hyperlink{classGame_a8ddb3360b68fae4ca85ad0fffeda4181}{conf}};}
+\DoxyCodeLine{24     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classGame_a8ca5b9f8a62990e6022de17785beac2c}{running}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{28     \textcolor{keywordtype}{void} \mbox{\hyperlink{classGame_a1ab78f5ed0d5ea879157357cf2fb2afa}{run}}();}
+\DoxyCodeLine{34     \textcolor{keywordtype}{float} \mbox{\hyperlink{classGame_a9a3f5fbc2421f295a0591d95044b74ee}{get\_delta\_time}}();}
+\DoxyCodeLine{42     \mbox{\hyperlink{classGame_a09bd9c2cc1910f570d019c02f06eecd9}{Game}}(\mbox{\hyperlink{classGameConf}{GameConf}} \mbox{\hyperlink{classGame_a8ddb3360b68fae4ca85ad0fffeda4181}{conf}}, \mbox{\hyperlink{classGameObject}{GameObject}}* \mbox{\hyperlink{classGame_a7dea8fb1ea2f75390a9edf6e7476fe37}{scene}}, \mbox{\hyperlink{classCamera}{Camera}}* \mbox{\hyperlink{classGame_ad562c30c9b62c0d2249364a86a59246e}{camera}});}
+\DoxyCodeLine{46     \mbox{\hyperlink{classGame_ae3d112ca6e0e55150d2fdbc704474530}{\string~Game}}();}
+\DoxyCodeLine{47 \textcolor{keyword}{private}:}
+\DoxyCodeLine{48     sf::Clock clock;}
+\DoxyCodeLine{49     \textcolor{keywordtype}{float} delta\_time;}
+\DoxyCodeLine{50     \textcolor{keywordtype}{void} iteration();}
+\DoxyCodeLine{51 \};}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{53 \textcolor{preprocessor}{\#endif }}
+
+\end{DoxyCode}

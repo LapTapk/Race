@@ -1,0 +1,34 @@
+\hypertarget{car__movement_8hpp_source}{}\doxysection{car\+\_\+movement.\+hpp}
+\label{car__movement_8hpp_source}\index{engine/include/components/car/car\_movement.hpp@{engine/include/components/car/car\_movement.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef CAR\_MOVEMENT\_HPP}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define CAR\_MOVEMENT\_HPP}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}game\_object.hpp"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}components/force.hpp"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}components/car/car\_conf.hpp"{}}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}components/road\_check.hpp"{}}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <SFML/Graphics.hpp>}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{14 \textcolor{keyword}{class }\mbox{\hyperlink{classCarMovement}{CarMovement}} : \textcolor{keyword}{public} \mbox{\hyperlink{classForce}{Force}} \{}
+\DoxyCodeLine{15 \textcolor{keyword}{private}:}
+\DoxyCodeLine{16     sf::Vector2f* vdeceleration;}
+\DoxyCodeLine{17     sf::Vector2f* vacceleration;}
+\DoxyCodeLine{18     sf::Vector2f direction;}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20 \textcolor{keyword}{public}:}
+\DoxyCodeLine{28     \mbox{\hyperlink{classCarMovement_acbd1409fb7681ab11ac10e3a09b512b0}{CarMovement}}(\mbox{\hyperlink{classGameObject}{GameObject}}* \mbox{\hyperlink{classComponent_a3af8d9227f74082452f5052f55ea18a5}{go}}, \mbox{\hyperlink{structCarConf}{CarConf}} \mbox{\hyperlink{classCarMovement_a0e2c118df80a5216429e60f1b60d3299}{conf}}, }
+\DoxyCodeLine{29         \mbox{\hyperlink{classRoadCheck}{RoadCheck}}* \mbox{\hyperlink{classCarMovement_a250f6ab094af383442ea965f9edd8609}{checker}});}
+\DoxyCodeLine{30     \mbox{\hyperlink{structCarConf}{CarConf}} \mbox{\hyperlink{classCarMovement_a0e2c118df80a5216429e60f1b60d3299}{conf}};}
+\DoxyCodeLine{31     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classCarMovement_aae19159524f50430a11fee1a144000c4}{decelerate}}\{ \textcolor{keyword}{false} \};}
+\DoxyCodeLine{32     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classCarMovement_a97295c5cbc54330e11fb131844ee379d}{move}}\{ \textcolor{keyword}{false} \};}
+\DoxyCodeLine{33     \textcolor{keywordtype}{void} \mbox{\hyperlink{classCarMovement_a82dbd355c333e9bd2981e085fae1110d}{set\_dir}}(sf::Vector2f dir);}
+\DoxyCodeLine{34     sf::Vector2f \mbox{\hyperlink{classCarMovement_a1933d692feb9d018d7a67eb9db285723}{get\_dir}}();}
+\DoxyCodeLine{38     \textcolor{keywordtype}{void} \mbox{\hyperlink{classCarMovement_a8fadabbc8d172b04d70ca40a4189e5b6}{update}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{39     \mbox{\hyperlink{classRoadCheck}{RoadCheck}}* \mbox{\hyperlink{classCarMovement_a250f6ab094af383442ea965f9edd8609}{checker}};}
+\DoxyCodeLine{40 \};}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

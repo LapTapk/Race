@@ -1,0 +1,97 @@
+\hypertarget{classGameObject}{}\doxysection{Game\+Object Class Reference}
+\label{classGameObject}\index{GameObject@{GameObject}}
+
+
+{\ttfamily \#include $<$game\+\_\+object.\+hpp$>$}
+
+
+
+Collaboration diagram for Game\+Object\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=244pt]{classGameObject__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGameObject_adad7d284b670db722a2fda8e6a7997e3}\label{classGameObject_adad7d284b670db722a2fda8e6a7997e3}} 
+void {\bfseries update} ()
+\begin{DoxyCompactList}\small\item\em Функция подсчета кадра, активирует подсчет кадров каждого компоненты components. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGameObject_a150c3be6961d9d5a78d5405d8a395e67}{remove\+\_\+cmp}} (\mbox{\hyperlink{classComponent}{Component}} $\ast$cmp)
+\item 
+\mbox{\hyperlink{classGameObject_a0348e3ee2e83d56eafca7a3547f432c4}{Game\+Object}} ()
+\item 
+\mbox{\hyperlink{classGameObject_ac59ffa2d8d3e171395a14e53c0d3b085}{Game\+Object}} (\mbox{\hyperlink{classGameObject}{Game\+Object}} $\ast$\mbox{\hyperlink{classGameObject_a4113a496ed45ca90756cfa0d8dfe6171}{parent}})
+\item 
+\mbox{\hyperlink{classGameObject_ab82dfdb656f9051c0587e6593b2dda97}{$\sim$\+Game\+Object}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGameObject_a4113a496ed45ca90756cfa0d8dfe6171}\label{classGameObject_a4113a496ed45ca90756cfa0d8dfe6171}} 
+\mbox{\hyperlink{classGameObject}{Game\+Object}} $\ast$ {\bfseries parent}
+\begin{DoxyCompactList}\small\item\em Родительский объект \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGameObject_ae66e3cc1ff948a0a7e6f0f7799e27d96}\label{classGameObject_ae66e3cc1ff948a0a7e6f0f7799e27d96}} 
+std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classComponent}{Component}} $>$ $>$ {\bfseries components}
+\begin{DoxyCompactList}\small\item\em Компоненты объекта \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGameObject_a40a3e73fcf5af36917f15beff9320b7d}\label{classGameObject_a40a3e73fcf5af36917f15beff9320b7d}} 
+std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classGameObject}{Game\+Object}} $>$ $>$ {\bfseries children}
+\begin{DoxyCompactList}\small\item\em Дети объекта \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGameObject_a9edf603be120d5a9221e5c5c962465f8}\label{classGameObject_a9edf603be120d5a9221e5c5c962465f8}} 
+\mbox{\hyperlink{classTransform}{Transform}} $\ast$ {\bfseries transform}
+\begin{DoxyCompactList}\small\item\em Основной компонент \mbox{\hyperlink{classTransform}{Transform}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс, отвечающий за основную единицу игры. Обладает компонентами, определяющими его поведение 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classGameObject_a0348e3ee2e83d56eafca7a3547f432c4}\label{classGameObject_a0348e3ee2e83d56eafca7a3547f432c4}} 
+\index{GameObject@{GameObject}!GameObject@{GameObject}}
+\index{GameObject@{GameObject}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{GameObject()}{GameObject()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Game\+Object\+::\+Game\+Object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Инициализатор \mbox{\hyperlink{classGameObject}{Game\+Object}}, который является сценой. Родительский объект равен nullptr \mbox{\Hypertarget{classGameObject_ac59ffa2d8d3e171395a14e53c0d3b085}\label{classGameObject_ac59ffa2d8d3e171395a14e53c0d3b085}} 
+\index{GameObject@{GameObject}!GameObject@{GameObject}}
+\index{GameObject@{GameObject}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{GameObject()}{GameObject()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Game\+Object\+::\+Game\+Object (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classGameObject}{Game\+Object}} $\ast$}]{parent }\end{DoxyParamCaption})}
+
+Инициализатор \mbox{\hyperlink{classGameObject}{Game\+Object}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & Родительский объект \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classGameObject_ab82dfdb656f9051c0587e6593b2dda97}\label{classGameObject_ab82dfdb656f9051c0587e6593b2dda97}} 
+\index{GameObject@{GameObject}!````~GameObject@{$\sim$GameObject}}
+\index{````~GameObject@{$\sim$GameObject}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{$\sim$GameObject()}{~GameObject()}}
+{\footnotesize\ttfamily Game\+Object\+::$\sim$\+Game\+Object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Деструктор \mbox{\hyperlink{classGameObject}{Game\+Object}}. Запускает деструкторы компонентов и детей 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classGameObject_a150c3be6961d9d5a78d5405d8a395e67}\label{classGameObject_a150c3be6961d9d5a78d5405d8a395e67}} 
+\index{GameObject@{GameObject}!remove\_cmp@{remove\_cmp}}
+\index{remove\_cmp@{remove\_cmp}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{remove\_cmp()}{remove\_cmp()}}
+{\footnotesize\ttfamily void Game\+Object\+::remove\+\_\+cmp (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classComponent}{Component}} $\ast$}]{cmp }\end{DoxyParamCaption})}
+
+Функция удаления компонента
+
+
+\begin{DoxyParams}{Parameters}
+{\em cmp} & Указатель на компонент, который следуюет удалить \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+engine/include/game\+\_\+object.\+hpp\item 
+engine/src/game\+\_\+object.\+cpp\end{DoxyCompactItemize}

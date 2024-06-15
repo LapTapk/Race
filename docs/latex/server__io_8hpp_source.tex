@@ -1,0 +1,34 @@
+\hypertarget{server__io_8hpp_source}{}\doxysection{server\+\_\+io.\+hpp}
+\label{server__io_8hpp_source}\index{engine/include/server\_io.hpp@{engine/include/server\_io.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef SERVER\_IO\_HPP}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define SERVER\_IO\_HPP}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <boost/asio.hpp>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <boost/algorithm/string.hpp>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <SFML/Graphics.hpp>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <thread>}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include "{}game\_object.hpp"{}}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include "{}components/transform.hpp"{}}}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{keyword}{using }boost::asio::ip::tcp;}
+\DoxyCodeLine{18 \textcolor{keyword}{class }\mbox{\hyperlink{classServerIO}{ServerIO}}  \{}
+\DoxyCodeLine{19 \textcolor{keyword}{public}:}
+\DoxyCodeLine{20     std::string port; }
+\DoxyCodeLine{21     boost::asio::io\_context \mbox{\hyperlink{classServerIO_a44033c28cf13c284ec48374c059cc28b}{io\_context}}; }
+\DoxyCodeLine{22     tcp::socket \mbox{\hyperlink{classServerIO_adb43a2643b9e22cb001fff56a170efa8}{socket}}; }
+\DoxyCodeLine{23     std::string \mbox{\hyperlink{classServerIO_a20ef0da88b6aef22ec9b06c501d7b620}{server\_ip}}; }
+\DoxyCodeLine{24     std::thread* \mbox{\hyperlink{classServerIO_a518d2817cc0df6e069d3a2020e7250ad}{reader\_thread}}; }
+\DoxyCodeLine{25     std::string \mbox{\hyperlink{classServerIO_af87bc8a8b28a1a4dfa3c2e2202547e3b}{reply}}\{ \textcolor{stringliteral}{"{}"{}} \}; }
+\DoxyCodeLine{31     \textcolor{keywordtype}{void} \mbox{\hyperlink{classServerIO_a676773955caa94ff8363f2b37535d430}{read\_from\_server}}(tcp::socket\& \mbox{\hyperlink{classServerIO_adb43a2643b9e22cb001fff56a170efa8}{socket}});}
+\DoxyCodeLine{38     \mbox{\hyperlink{classServerIO_a9f5faae194634300f93205a9c7a9f5fd}{ServerIO}}(std::string \mbox{\hyperlink{classServerIO_a20ef0da88b6aef22ec9b06c501d7b620}{server\_ip}}, std::string port);}
+\DoxyCodeLine{44     \textcolor{keywordtype}{void} \mbox{\hyperlink{classServerIO_a3b42ec262243475b66c07a5e4f6fd6b8}{send\_message}}(std::string mes);}
+\DoxyCodeLine{45     \mbox{\hyperlink{classServerIO}{\string~ServerIO}}(); }
+\DoxyCodeLine{46 \};}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

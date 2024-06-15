@@ -1,0 +1,95 @@
+\hypertarget{classCarMovement}{}\doxysection{Car\+Movement Class Reference}
+\label{classCarMovement}\index{CarMovement@{CarMovement}}
+
+
+{\ttfamily \#include $<$car\+\_\+movement.\+hpp$>$}
+
+
+
+Inheritance diagram for Car\+Movement\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=166pt]{classCarMovement__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Car\+Movement\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCarMovement__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCarMovement_acbd1409fb7681ab11ac10e3a09b512b0}{Car\+Movement}} (\mbox{\hyperlink{classGameObject}{Game\+Object}} $\ast$\mbox{\hyperlink{classComponent_a3af8d9227f74082452f5052f55ea18a5}{go}}, \mbox{\hyperlink{structCarConf}{Car\+Conf}} \mbox{\hyperlink{classCarMovement_a0e2c118df80a5216429e60f1b60d3299}{conf}}, \mbox{\hyperlink{classRoadCheck}{Road\+Check}} $\ast$\mbox{\hyperlink{classCarMovement_a250f6ab094af383442ea965f9edd8609}{checker}})
+\item 
+\mbox{\Hypertarget{classCarMovement_a82dbd355c333e9bd2981e085fae1110d}\label{classCarMovement_a82dbd355c333e9bd2981e085fae1110d}} 
+void {\bfseries set\+\_\+dir} (sf\+::\+Vector2f dir)
+\begin{DoxyCompactList}\small\item\em Задать направление движения. Нормализует выданный вектор \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCarMovement_a1933d692feb9d018d7a67eb9db285723}\label{classCarMovement_a1933d692feb9d018d7a67eb9db285723}} 
+sf\+::\+Vector2f {\bfseries get\+\_\+dir} ()
+\begin{DoxyCompactList}\small\item\em Получить вектор движения \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCarMovement_a8fadabbc8d172b04d70ca40a4189e5b6}{update}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classCarMovement_a0e2c118df80a5216429e60f1b60d3299}\label{classCarMovement_a0e2c118df80a5216429e60f1b60d3299}} 
+\mbox{\hyperlink{structCarConf}{Car\+Conf}} {\bfseries conf}
+\begin{DoxyCompactList}\small\item\em Конфигурация машины \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCarMovement_aae19159524f50430a11fee1a144000c4}\label{classCarMovement_aae19159524f50430a11fee1a144000c4}} 
+bool {\bfseries decelerate} \{ false \}
+\begin{DoxyCompactList}\small\item\em Состояния, показывающее, необходимо ли замедлять машину \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCarMovement_a97295c5cbc54330e11fb131844ee379d}\label{classCarMovement_a97295c5cbc54330e11fb131844ee379d}} 
+bool {\bfseries move} \{ false \}
+\begin{DoxyCompactList}\small\item\em Состояние, показывающее, необходимо ли начать движение \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCarMovement_a250f6ab094af383442ea965f9edd8609}\label{classCarMovement_a250f6ab094af383442ea965f9edd8609}} 
+\mbox{\hyperlink{classRoadCheck}{Road\+Check}} $\ast$ {\bfseries checker}
+\begin{DoxyCompactList}\small\item\em Элемент, проверяющий нахождение на дороге \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Компонент, отвеючащий за движение, схожее с движением автомобиля 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classCarMovement_acbd1409fb7681ab11ac10e3a09b512b0}\label{classCarMovement_acbd1409fb7681ab11ac10e3a09b512b0}} 
+\index{CarMovement@{CarMovement}!CarMovement@{CarMovement}}
+\index{CarMovement@{CarMovement}!CarMovement@{CarMovement}}
+\doxysubsubsection{\texorpdfstring{CarMovement()}{CarMovement()}}
+{\footnotesize\ttfamily Car\+Movement\+::\+Car\+Movement (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classGameObject}{Game\+Object}} $\ast$}]{go,  }\item[{\mbox{\hyperlink{structCarConf}{Car\+Conf}}}]{conf,  }\item[{\mbox{\hyperlink{classRoadCheck}{Road\+Check}} $\ast$}]{checker }\end{DoxyParamCaption})}
+
+Конструктор \mbox{\hyperlink{classCarMovement}{Car\+Movement}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em go} & Родительский объект \\
+\hline
+{\em conf} & Конфигурация машины \\
+\hline
+{\em checker} & Элемент, проверяющий нахождение на дороге \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classCarMovement_a8fadabbc8d172b04d70ca40a4189e5b6}\label{classCarMovement_a8fadabbc8d172b04d70ca40a4189e5b6}} 
+\index{CarMovement@{CarMovement}!update@{update}}
+\index{update@{update}!CarMovement@{CarMovement}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Car\+Movement\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Функция обработки кадра 
+
+Reimplemented from \mbox{\hyperlink{classComponent}{Component}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+engine/include/components/car/car\+\_\+movement.\+hpp\item 
+engine/src/components/car/car\+\_\+movement.\+cpp\end{DoxyCompactItemize}

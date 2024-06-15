@@ -1,0 +1,104 @@
+\hypertarget{classTextRenderer}{}\doxysection{Text\+Renderer Class Reference}
+\label{classTextRenderer}\index{TextRenderer@{TextRenderer}}
+
+
+{\ttfamily \#include $<$text\+\_\+renderer.\+hpp$>$}
+
+
+
+Inheritance diagram for Text\+Renderer\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=161pt]{classTextRenderer__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Text\+Renderer\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=337pt]{classTextRenderer__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTextRenderer_aa6fb8c06cbec00cf37146607198c88ef}{Text\+Renderer}} (\mbox{\hyperlink{classGameObject}{Game\+Object}} $\ast$\mbox{\hyperlink{classComponent_a3af8d9227f74082452f5052f55ea18a5}{go}}, std\+::string path\+\_\+to\+\_\+font)
+\item 
+float \mbox{\hyperlink{classTextRenderer_aac44fdb1eb8892c4ca6f652be3124707}{rotation}} ()
+\item 
+sf\+::\+Vector2f \mbox{\hyperlink{classTextRenderer_a0bebfc3375877e7a7cf9184051fde7cf}{position}} ()
+\item 
+sf\+::\+Vector2f \mbox{\hyperlink{classTextRenderer_a86b6831bf68dfd9b7cccc60c5e56ee0d}{scale}} ()
+\item 
+void \mbox{\hyperlink{classTextRenderer_a39ede61b407647e79ec084b697a4df35}{update}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTextRenderer_a039e9661ec3db271a68f0a6a929b8eab}\label{classTextRenderer_a039e9661ec3db271a68f0a6a929b8eab}} 
+sf\+::\+Font {\bfseries font}
+\begin{DoxyCompactList}\small\item\em Шрифт текста \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTextRenderer_a4a5d28f792a34f6f34c94d9057d9f1e0}\label{classTextRenderer_a4a5d28f792a34f6f34c94d9057d9f1e0}} 
+sf\+::\+Text {\bfseries text}
+\begin{DoxyCompactList}\small\item\em Текст \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Компонент, отображающий текст 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classTextRenderer_aa6fb8c06cbec00cf37146607198c88ef}\label{classTextRenderer_aa6fb8c06cbec00cf37146607198c88ef}} 
+\index{TextRenderer@{TextRenderer}!TextRenderer@{TextRenderer}}
+\index{TextRenderer@{TextRenderer}!TextRenderer@{TextRenderer}}
+\doxysubsubsection{\texorpdfstring{TextRenderer()}{TextRenderer()}}
+{\footnotesize\ttfamily Text\+Renderer\+::\+Text\+Renderer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classGameObject}{Game\+Object}} $\ast$}]{go,  }\item[{std\+::string}]{path\+\_\+to\+\_\+font }\end{DoxyParamCaption})}
+
+Конструктор \mbox{\hyperlink{classTextRenderer}{Text\+Renderer}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em go} & Родительский объект \\
+\hline
+{\em path\+\_\+to\+\_\+font} & Путь до шрифта \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classTextRenderer_a0bebfc3375877e7a7cf9184051fde7cf}\label{classTextRenderer_a0bebfc3375877e7a7cf9184051fde7cf}} 
+\index{TextRenderer@{TextRenderer}!position@{position}}
+\index{position@{position}!TextRenderer@{TextRenderer}}
+\doxysubsubsection{\texorpdfstring{position()}{position()}}
+{\footnotesize\ttfamily sf\+::\+Vector2f Text\+Renderer\+::position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Позиция текста \mbox{\Hypertarget{classTextRenderer_aac44fdb1eb8892c4ca6f652be3124707}\label{classTextRenderer_aac44fdb1eb8892c4ca6f652be3124707}} 
+\index{TextRenderer@{TextRenderer}!rotation@{rotation}}
+\index{rotation@{rotation}!TextRenderer@{TextRenderer}}
+\doxysubsubsection{\texorpdfstring{rotation()}{rotation()}}
+{\footnotesize\ttfamily float Text\+Renderer\+::rotation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Ориентация текста \mbox{\Hypertarget{classTextRenderer_a86b6831bf68dfd9b7cccc60c5e56ee0d}\label{classTextRenderer_a86b6831bf68dfd9b7cccc60c5e56ee0d}} 
+\index{TextRenderer@{TextRenderer}!scale@{scale}}
+\index{scale@{scale}!TextRenderer@{TextRenderer}}
+\doxysubsubsection{\texorpdfstring{scale()}{scale()}}
+{\footnotesize\ttfamily sf\+::\+Vector2f Text\+Renderer\+::scale (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Размер текста \mbox{\Hypertarget{classTextRenderer_a39ede61b407647e79ec084b697a4df35}\label{classTextRenderer_a39ede61b407647e79ec084b697a4df35}} 
+\index{TextRenderer@{TextRenderer}!update@{update}}
+\index{update@{update}!TextRenderer@{TextRenderer}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Text\+Renderer\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Функция обработки кадров 
+
+Reimplemented from \mbox{\hyperlink{classComponent}{Component}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+engine/include/components/text\+\_\+renderer.\+hpp\item 
+engine/src/components/text\+\_\+rendrer.\+cpp\end{DoxyCompactItemize}

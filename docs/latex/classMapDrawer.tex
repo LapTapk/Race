@@ -1,0 +1,95 @@
+\hypertarget{classMapDrawer}{}\doxysection{Map\+Drawer Class Reference}
+\label{classMapDrawer}\index{MapDrawer@{MapDrawer}}
+
+
+{\ttfamily \#include $<$map\+\_\+drawer.\+hpp$>$}
+
+
+
+Inheritance diagram for Map\+Drawer\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=153pt]{classMapDrawer__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Map\+Drawer\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=302pt]{classMapDrawer__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMapDrawer_aace55676992041c76218b43b637484c0}{Map\+Drawer}} (\mbox{\hyperlink{classGameObject}{Game\+Object}} $\ast$\mbox{\hyperlink{classComponent_a3af8d9227f74082452f5052f55ea18a5}{go}}, std\+::string path\+\_\+to\+\_\+json, bool \mbox{\hyperlink{classMapDrawer_a190a0d9ac3110185ba8a0cdffccacb83}{write}}, sf\+::\+Primitive\+Type \mbox{\hyperlink{classMapDrawer_a09208bbc33a963d0e08d8c924c4102f2}{draw\+\_\+mode}})
+\item 
+void \mbox{\hyperlink{classMapDrawer_a02d8267cb9a56586c9bdb256629252c3}{update}} () override
+\item 
+void \mbox{\hyperlink{classMapDrawer_ac626ccb1ec6b6c7e6535dcd7d3daba04}{draw}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classMapDrawer_a190a0d9ac3110185ba8a0cdffccacb83}\label{classMapDrawer_a190a0d9ac3110185ba8a0cdffccacb83}} 
+bool {\bfseries write}
+\begin{DoxyCompactList}\small\item\em Состояние, показывающее, нужно ли считывать точки по нажатию ЛКМ \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMapDrawer_a7131e57bae23fb5f0d4f73bb4d0d9ad1}\label{classMapDrawer_a7131e57bae23fb5f0d4f73bb4d0d9ad1}} 
+\mbox{\hyperlink{classMapCoords}{Map\+Coords}} {\bfseries coords}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classMapCoords}{Map\+Coords}}, откуда будут считываться линии \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMapDrawer_a09208bbc33a963d0e08d8c924c4102f2}\label{classMapDrawer_a09208bbc33a963d0e08d8c924c4102f2}} 
+sf\+::\+Primitive\+Type {\bfseries draw\+\_\+mode}
+\begin{DoxyCompactList}\small\item\em Параметр отрисовки линий \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Компонент, отрисовывающий точки на экране. Способен добавлять точки в \mbox{\hyperlink{classMapCoords}{Map\+Coords}} по нажатию ЛКМ. Сохраняет точки при каждом добавлении. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classMapDrawer_aace55676992041c76218b43b637484c0}\label{classMapDrawer_aace55676992041c76218b43b637484c0}} 
+\index{MapDrawer@{MapDrawer}!MapDrawer@{MapDrawer}}
+\index{MapDrawer@{MapDrawer}!MapDrawer@{MapDrawer}}
+\doxysubsubsection{\texorpdfstring{MapDrawer()}{MapDrawer()}}
+{\footnotesize\ttfamily Map\+Drawer\+::\+Map\+Drawer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classGameObject}{Game\+Object}} $\ast$}]{go,  }\item[{std\+::string}]{path\+\_\+to\+\_\+json,  }\item[{bool}]{write,  }\item[{sf\+::\+Primitive\+Type}]{draw\+\_\+mode }\end{DoxyParamCaption})}
+
+Конструктор \mbox{\hyperlink{classMapDrawer}{Map\+Drawer}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em go} & Родительский объект \\
+\hline
+{\em path\+\_\+to\+\_\+json} & Путь до JSON-\/файла с координатами линий \\
+\hline
+{\em write} & Состояние, показывающее, нужно ли считывать точки по нажатию ЛКМ \\
+\hline
+{\em draw\+\_\+mode} & Параметр отрисовки линий \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classMapDrawer_ac626ccb1ec6b6c7e6535dcd7d3daba04}\label{classMapDrawer_ac626ccb1ec6b6c7e6535dcd7d3daba04}} 
+\index{MapDrawer@{MapDrawer}!draw@{draw}}
+\index{draw@{draw}!MapDrawer@{MapDrawer}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Map\+Drawer\+::draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Функция отрисовки линий \mbox{\Hypertarget{classMapDrawer_a02d8267cb9a56586c9bdb256629252c3}\label{classMapDrawer_a02d8267cb9a56586c9bdb256629252c3}} 
+\index{MapDrawer@{MapDrawer}!update@{update}}
+\index{update@{update}!MapDrawer@{MapDrawer}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Map\+Drawer\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Функция счета кадра 
+
+Reimplemented from \mbox{\hyperlink{classComponent}{Component}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+engine/include/components/map\+\_\+drawer.\+hpp\item 
+engine/src/components/map\+\_\+drawer.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,82 @@
+\hypertarget{classMapCoords}{}\doxysection{Map\+Coords Class Reference}
+\label{classMapCoords}\index{MapCoords@{MapCoords}}
+
+
+{\ttfamily \#include $<$map\+\_\+drawer.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMapCoords_a4512816f6b93d6f1d2ced7936e1fea40}{Map\+Coords}} (std\+::string path\+\_\+to\+\_\+json)
+\item 
+Json\+::\+Value \mbox{\hyperlink{classMapCoords_a62c0721cb0625dc850db8ebcc99817cf}{to\+\_\+json}} ()
+\item 
+void \mbox{\hyperlink{classMapCoords_a102d51fb5481adb33c771ba37bf49844}{save}} ()
+\item 
+void \mbox{\hyperlink{classMapCoords_a41205c15ce29345474e6d7df482ce722}{push\+\_\+back}} (sf\+::\+Vector2f v)
+\item 
+\mbox{\hyperlink{classMapCoords_ae35ad00246659c2cc29a05f977ac3e3a}{$\sim$\+Map\+Coords}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classMapCoords_ae4204ad9ec6fe77cb195dadf6f78b29d}\label{classMapCoords_ae4204ad9ec6fe77cb195dadf6f78b29d}} 
+std\+::vector$<$ sf\+::\+Vector2f $>$ {\bfseries points}
+\begin{DoxyCompactList}\small\item\em Координаты линий \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс, отвечающий за хранение информации о координатах. Способен записывать и читать координаты линий в JSON-\/файлах. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classMapCoords_a4512816f6b93d6f1d2ced7936e1fea40}\label{classMapCoords_a4512816f6b93d6f1d2ced7936e1fea40}} 
+\index{MapCoords@{MapCoords}!MapCoords@{MapCoords}}
+\index{MapCoords@{MapCoords}!MapCoords@{MapCoords}}
+\doxysubsubsection{\texorpdfstring{MapCoords()}{MapCoords()}}
+{\footnotesize\ttfamily Map\+Coords\+::\+Map\+Coords (\begin{DoxyParamCaption}\item[{std\+::string}]{path\+\_\+to\+\_\+json }\end{DoxyParamCaption})}
+
+Конструктор \mbox{\hyperlink{classMapCoords}{Map\+Coords}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em path\+\_\+to\+\_\+json} & Путь до JSON-\/файла с координатами линий \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classMapCoords_ae35ad00246659c2cc29a05f977ac3e3a}\label{classMapCoords_ae35ad00246659c2cc29a05f977ac3e3a}} 
+\index{MapCoords@{MapCoords}!````~MapCoords@{$\sim$MapCoords}}
+\index{````~MapCoords@{$\sim$MapCoords}!MapCoords@{MapCoords}}
+\doxysubsubsection{\texorpdfstring{$\sim$MapCoords()}{~MapCoords()}}
+{\footnotesize\ttfamily Map\+Coords\+::$\sim$\+Map\+Coords (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Деструктор \mbox{\hyperlink{classMapCoords}{Map\+Coords}}. Записывает points в JSON-\/файл 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classMapCoords_a41205c15ce29345474e6d7df482ce722}\label{classMapCoords_a41205c15ce29345474e6d7df482ce722}} 
+\index{MapCoords@{MapCoords}!push\_back@{push\_back}}
+\index{push\_back@{push\_back}!MapCoords@{MapCoords}}
+\doxysubsubsection{\texorpdfstring{push\_back()}{push\_back()}}
+{\footnotesize\ttfamily void Map\+Coords\+::push\+\_\+back (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{v }\end{DoxyParamCaption})}
+
+Добавление точки в points \mbox{\Hypertarget{classMapCoords_a102d51fb5481adb33c771ba37bf49844}\label{classMapCoords_a102d51fb5481adb33c771ba37bf49844}} 
+\index{MapCoords@{MapCoords}!save@{save}}
+\index{save@{save}!MapCoords@{MapCoords}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily void Map\+Coords\+::save (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Сохранение линий в JSON-\/файл \mbox{\Hypertarget{classMapCoords_a62c0721cb0625dc850db8ebcc99817cf}\label{classMapCoords_a62c0721cb0625dc850db8ebcc99817cf}} 
+\index{MapCoords@{MapCoords}!to\_json@{to\_json}}
+\index{to\_json@{to\_json}!MapCoords@{MapCoords}}
+\doxysubsubsection{\texorpdfstring{to\_json()}{to\_json()}}
+{\footnotesize\ttfamily Json\+::\+Value Map\+Coords\+::to\+\_\+json (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Парсинг линий в JSON-\/формат
+
+\begin{DoxyReturn}{Returns}
+Координаты линий в JSON-\/формате 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+engine/include/components/map\+\_\+drawer.\+hpp\item 
+engine/src/components/map\+\_\+drawer.\+cpp\end{DoxyCompactItemize}

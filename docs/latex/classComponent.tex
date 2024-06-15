@@ -1,0 +1,80 @@
+\hypertarget{classComponent}{}\doxysection{Component Class Reference}
+\label{classComponent}\index{Component@{Component}}
+
+
+{\ttfamily \#include $<$game\+\_\+object.\+hpp$>$}
+
+
+
+Inheritance diagram for Component\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classComponent__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Component\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=238pt]{classComponent__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classComponent_a2c9d95ea989f2d69381ad9b6728b51ae}{update}} ()
+\item 
+\mbox{\hyperlink{classComponent_ae527ef1a4d1be744d50e2676a6c4f5f6}{Component}} (\mbox{\hyperlink{classGameObject}{Game\+Object}} $\ast$\mbox{\hyperlink{classComponent_a3af8d9227f74082452f5052f55ea18a5}{go}})
+\begin{DoxyCompactList}\small\item\em Функция подсчета кадра \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classComponent_a3af8d9227f74082452f5052f55ea18a5}\label{classComponent_a3af8d9227f74082452f5052f55ea18a5}} 
+\mbox{\hyperlink{classGameObject}{Game\+Object}} $\ast$ {\bfseries go}
+\begin{DoxyCompactList}\small\item\em Родительский объект \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Базовый класс, отвечающий за определение поведения \mbox{\hyperlink{classGameObject}{Game\+Object}} 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classComponent_ae527ef1a4d1be744d50e2676a6c4f5f6}\label{classComponent_ae527ef1a4d1be744d50e2676a6c4f5f6}} 
+\index{Component@{Component}!Component@{Component}}
+\index{Component@{Component}!Component@{Component}}
+\doxysubsubsection{\texorpdfstring{Component()}{Component()}}
+{\footnotesize\ttfamily Component\+::\+Component (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classGameObject}{Game\+Object}} $\ast$}]{go }\end{DoxyParamCaption})}
+
+
+
+Функция подсчета кадра 
+
+Конструктор \mbox{\hyperlink{classComponent}{Component}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em go} & Родительский объект \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classComponent_a2c9d95ea989f2d69381ad9b6728b51ae}\label{classComponent_a2c9d95ea989f2d69381ad9b6728b51ae}} 
+\index{Component@{Component}!update@{update}}
+\index{update@{update}!Component@{Component}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily virtual void Component\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classWheelCarInput_a65e47e3202a3fe98f432ffa1fddade0f}{Wheel\+Car\+Input}}, \mbox{\hyperlink{classCarMovement_a8fadabbc8d172b04d70ca40a4189e5b6}{Car\+Movement}}, \mbox{\hyperlink{classLoopCounter_adecdb1453059726f49c25a9c01364b45}{Loop\+Counter}}, \mbox{\hyperlink{classClient_a110aba49e2bcc00b2c76f46ff481966e}{Client}}, \mbox{\hyperlink{classForce_a4fcd6417642d4ccbdc88948e27b86cc9}{Force}}, \mbox{\hyperlink{classMapDrawer_a02d8267cb9a56586c9bdb256629252c3}{Map\+Drawer}}, \mbox{\hyperlink{classMovement_a5992b9d7eaad3b86ca0b67807afb62ae}{Movement}}, \mbox{\hyperlink{classRenderer_aeb5373caa5035e9ff2b9d9f4103712ea}{Renderer}}, \mbox{\hyperlink{classRotor_a3bec2364cda89a5258c451970409a193}{Rotor}}, and \mbox{\hyperlink{classTextRenderer_a39ede61b407647e79ec084b697a4df35}{Text\+Renderer}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+engine/include/game\+\_\+object.\+hpp\item 
+engine/src/game\+\_\+object.\+cpp\end{DoxyCompactItemize}

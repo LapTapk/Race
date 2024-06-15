@@ -1,0 +1,36 @@
+\hypertarget{client_8hpp_source}{}\doxysection{client.\+hpp}
+\label{client_8hpp_source}\index{engine/include/components/client.hpp@{engine/include/components/client.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef CLIENT\_HPP}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define CLIENT\_HPP}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <boost/asio.hpp>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <boost/algorithm/string.hpp>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <SFML/Graphics.hpp>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <thread>}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include "{}game\_object.hpp"{}}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include "{}components/transform.hpp"{}}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include "{}server\_io.hpp"{}}}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 \textcolor{keyword}{using }boost::asio::ip::tcp;}
+\DoxyCodeLine{19 \textcolor{keyword}{class }\mbox{\hyperlink{classClient}{Client}} : \textcolor{keyword}{public} \mbox{\hyperlink{classComponent}{Component}} \{}
+\DoxyCodeLine{20 \textcolor{keyword}{public}:}
+\DoxyCodeLine{21     \mbox{\hyperlink{classServerIO}{ServerIO}}\& sio; }
+\DoxyCodeLine{22     std::vector<sf::Vector2f> \mbox{\hyperlink{classClient_a89691ec74f109d1640748710685b01d8}{coords}}; }
+\DoxyCodeLine{23     std::vector<GameObject*> \mbox{\hyperlink{classClient_aa063a27c5d65d7aff2d214a9379823b0}{players}}; }
+\DoxyCodeLine{24     \textcolor{keywordtype}{int} \mbox{\hyperlink{classClient_a3eb964d53f0bfb55be340eb13c97abef}{this\_ind}}; }
+\DoxyCodeLine{25     std::string \mbox{\hyperlink{classClient_aa20ff1dca054d3991ac332bad233b911}{create\_mes}}(); }
+\DoxyCodeLine{31     \textcolor{keywordtype}{void} \mbox{\hyperlink{classClient_aadbf13854fc7b601138a9249432ef236}{parse\_coords}}(}
+\DoxyCodeLine{32         std::string mes);}
+\DoxyCodeLine{41     \mbox{\hyperlink{classClient_a32c7fd456ed6832faa60064651adacc2}{Client}}(\mbox{\hyperlink{classGameObject}{GameObject}}* \mbox{\hyperlink{classComponent_a3af8d9227f74082452f5052f55ea18a5}{go}}, \mbox{\hyperlink{classServerIO}{ServerIO}}\& sio,}
+\DoxyCodeLine{42         \textcolor{keywordtype}{int} \mbox{\hyperlink{classClient_a3eb964d53f0bfb55be340eb13c97abef}{this\_ind}}, std::vector<GameObject*> \mbox{\hyperlink{classClient_aa063a27c5d65d7aff2d214a9379823b0}{players}});}
+\DoxyCodeLine{43     \textcolor{keywordtype}{void} set\_positions(); }
+\DoxyCodeLine{44     \textcolor{keywordtype}{void} \mbox{\hyperlink{classClient_a110aba49e2bcc00b2c76f46ff481966e}{update}}() \textcolor{keyword}{override}; }
+\DoxyCodeLine{45 \};}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

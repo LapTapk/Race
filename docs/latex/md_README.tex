@@ -1,0 +1,42 @@
+\hypertarget{md_README_autotoc_md1}{}\doxysection{Руководство пользователя}\label{md_README_autotoc_md1}
+Игра представляет собой гонки. Реализована только для Linux.
+
+Перед запуском игры должен быть запущен сервер, чтобы его запустить, нужно запустить исполняемый файл build/server и передать ему аргумент в виде порта, на котором он будет слушать. Чтобы запустить игру, необходимо запустить исполняемый файл, расположенный в build/main. После запуска игры нужно ввести IP-\/адресс и порт, на которых запущен сервер. Как только все игроки будут готовы, запустится сама игра.\hypertarget{md_README_autotoc_md2}{}\doxysection{Руковдоство разработчика}\label{md_README_autotoc_md2}
+\hypertarget{md_README_autotoc_md3}{}\doxysubsection{Установка зависимостей}\label{md_README_autotoc_md3}
+Зависимости проекта Race\+:
+\begin{DoxyItemize}
+\item SFML 2.\+5 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{* jsoncpp 1.9.5}
+\DoxyCodeLine{```apt install libjsoncpp-\/dev}
+
+\end{DoxyCode}
+
+\item boost 1.\+84 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\#\#\# Архитектура Race}
+\DoxyCodeLine{Проект Race построен на самописной игровой архитектуре. Этот движок позвояляет с относительной простотой определять логику игры. }
+\DoxyCodeLine{Основным классом проекта является Game. Основным классом игрового пространства является GameObject. Игровое пространство представялет собой дерево, узлами которого являются GameObject, они связаны отношениями родитель-\/ребенок. Узел без родителя называется сценой. }
+\DoxyCodeLine{Поведение объекта в каждом кадре определяется списком его компонентов.}
+\DoxyCodeLine{}
+\DoxyCodeLine{Приведем пример простой игры}
+\DoxyCodeLine{}
+\DoxyCodeLine{Файл main.cpp будет выглядеть следующим образом:}
+
+\end{DoxyCode}
+ \#include \char`\"{}game.\+hpp\char`\"{} \#include \char`\"{}game\+\_\+object.\+hpp\char`\"{} \#include \char`\"{}game\+\_\+conf.\+hpp\char`\"{} \#include \char`\"{}components.\+hpp\char`\"{} \#include \texorpdfstring{$<$}{<}SFML/\+Graphics.\+hpp\texorpdfstring{$>$}{>}
+\end{DoxyItemize}
+
+void create\+\_\+scene(\+Game\+Object$\ast$\& scene, Camera$\ast$\& camera) \{ scene = new \mbox{\hyperlink{classGameObject}{Game\+Object}}\{nullptr\}; camera = new \mbox{\hyperlink{classCamera}{Camera}}\{scene\};
+
+Game\+Object$\ast$ go\{scene\}; Renderer$\ast$ renderer\{new \mbox{\hyperlink{classRenderer}{Renderer}}\{go, \char`\"{}path/to/img\char`\"{}\}\}; Movement$\ast$ mover\{new \mbox{\hyperlink{classMovement}{Movement}}\{go\}\}; mover-\/\texorpdfstring{$>$}{>}vector = sf\+::\+Vector2\{1, 0\}; \}
+
+int main() \{ \begin{DoxyVerb}GameObject* scene;
+Camera* camera;
+create_scene(scene, camera);
+
+GameConf conf{"path/to/conf"};
+Game game{conf, scene, camera};
+game.run();
+\end{DoxyVerb}
+ \} \`{}\`{}\`{} 

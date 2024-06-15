@@ -1,0 +1,25 @@
+\hypertarget{text__renderer_8hpp_source}{}\doxysection{text\+\_\+renderer.\+hpp}
+\label{text__renderer_8hpp_source}\index{engine/include/components/text\_renderer.hpp@{engine/include/components/text\_renderer.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef TEXT\_RENDERER\_HPP}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define TEXT\_RENDERER\_HPP}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}game\_object.hpp"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <SFML/Graphics.hpp>}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{11 \textcolor{keyword}{class }\mbox{\hyperlink{classTextRenderer}{TextRenderer}} : \textcolor{keyword}{public} \mbox{\hyperlink{classComponent}{Component}} \{}
+\DoxyCodeLine{12 \textcolor{keyword}{public}: }
+\DoxyCodeLine{13     sf::Font \mbox{\hyperlink{classTextRenderer_a039e9661ec3db271a68f0a6a929b8eab}{font}};}
+\DoxyCodeLine{14     sf::Text \mbox{\hyperlink{classTextRenderer_a4a5d28f792a34f6f34c94d9057d9f1e0}{text}};}
+\DoxyCodeLine{21     \mbox{\hyperlink{classTextRenderer_aa6fb8c06cbec00cf37146607198c88ef}{TextRenderer}}(\mbox{\hyperlink{classGameObject}{GameObject}}* \mbox{\hyperlink{classComponent_a3af8d9227f74082452f5052f55ea18a5}{go}}, std::string path\_to\_font);}
+\DoxyCodeLine{25     \textcolor{keywordtype}{float} \mbox{\hyperlink{classTextRenderer_aac44fdb1eb8892c4ca6f652be3124707}{rotation}}(); }
+\DoxyCodeLine{29     sf::Vector2f \mbox{\hyperlink{classTextRenderer_a0bebfc3375877e7a7cf9184051fde7cf}{position}}();}
+\DoxyCodeLine{33     sf::Vector2f \mbox{\hyperlink{classTextRenderer_a86b6831bf68dfd9b7cccc60c5e56ee0d}{scale}}();}
+\DoxyCodeLine{37     \textcolor{keywordtype}{void} \mbox{\hyperlink{classTextRenderer_a39ede61b407647e79ec084b697a4df35}{update}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{38 \};}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

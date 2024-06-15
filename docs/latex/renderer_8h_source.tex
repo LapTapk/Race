@@ -1,0 +1,23 @@
+\hypertarget{renderer_8h_source}{}\doxysection{renderer.\+h}
+\label{renderer_8h_source}\index{engine/include/components/renderer.h@{engine/include/components/renderer.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef RENDERER\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define RENDERER\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}game\_object.h"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <SFML/Graphics.hpp>}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{keyword}{class }\mbox{\hyperlink{classRenderer}{Renderer}} : \textcolor{keyword}{public} \mbox{\hyperlink{classComponent}{Component}} \{}
+\DoxyCodeLine{9 \textcolor{keyword}{public}:}
+\DoxyCodeLine{10     \mbox{\hyperlink{classRenderer}{Renderer}}(\mbox{\hyperlink{classGameObject}{GameObject}}* \mbox{\hyperlink{classComponent_a3af8d9227f74082452f5052f55ea18a5}{go}}, std::string path\_to\_img);}
+\DoxyCodeLine{11     \textcolor{keywordtype}{void} update() \textcolor{keyword}{override};}
+\DoxyCodeLine{12 \textcolor{keyword}{private}:}
+\DoxyCodeLine{13     sf::Sprite sprite;}
+\DoxyCodeLine{14     sf::Texture texture;}
+\DoxyCodeLine{15 \};}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

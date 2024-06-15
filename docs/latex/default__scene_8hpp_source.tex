@@ -1,0 +1,101 @@
+\hypertarget{default__scene_8hpp_source}{}\doxysection{default\+\_\+scene.\+hpp}
+\label{default__scene_8hpp_source}\index{scenes/default\_scene.hpp@{scenes/default\_scene.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef DEFAULT\_SCENE\_HPP}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define DEFAULT\_SCENE\_HPP}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}game\_object.hpp"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}components.hpp"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \mbox{\hyperlink{classGameObject}{GameObject}}* create\_penguin(\mbox{\hyperlink{classGameObject}{GameObject}}* scene, \mbox{\hyperlink{classCamera}{Camera}}* camera) \{}
+\DoxyCodeLine{10     \mbox{\hyperlink{classGameObject}{GameObject}}* go\{ \textcolor{keyword}{new} \mbox{\hyperlink{classGameObject}{GameObject}}\{scene\} \};}
+\DoxyCodeLine{11     \mbox{\hyperlink{classRenderer}{Renderer}}* rend\{ \textcolor{keyword}{new} \mbox{\hyperlink{classRenderer}{Renderer}}\{go, \textcolor{stringliteral}{"{}../assets/penguin.png"{}} \} \};}
+\DoxyCodeLine{12     go-\/>transform-\/>position = sf::Vector2f\{ 1000, 1000 \};}
+\DoxyCodeLine{13     \textcolor{keywordflow}{return} go;}
+\DoxyCodeLine{14 \}}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16 \mbox{\hyperlink{classGameObject}{GameObject}}* create\_map\_drawer(\mbox{\hyperlink{classGameObject}{GameObject}}* scene, std::string path,}
+\DoxyCodeLine{17     \textcolor{keywordtype}{bool} write, sf::PrimitiveType draw\_mode) \{}
+\DoxyCodeLine{18     \mbox{\hyperlink{classGameObject}{GameObject}}* go\{ \textcolor{keyword}{new} \mbox{\hyperlink{classGameObject}{GameObject}}\{scene\} \};}
+\DoxyCodeLine{19     \textcolor{keyword}{new} \mbox{\hyperlink{classMapDrawer}{MapDrawer}}\{ go, path, write, draw\_mode \};}
+\DoxyCodeLine{20     \textcolor{keywordflow}{return} go;}
+\DoxyCodeLine{21 \}}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23 \mbox{\hyperlink{classstd_1_1tuple}{std::tuple<GameObject*, CarMovement*>}} create\_car(\mbox{\hyperlink{classGameObject}{GameObject}}* scene, \mbox{\hyperlink{classCamera}{Camera}}* camera, \mbox{\hyperlink{classRoadCheck}{RoadCheck}}* check) \{}
+\DoxyCodeLine{24     \mbox{\hyperlink{classGameObject}{GameObject}}* car\{ \textcolor{keyword}{new} \mbox{\hyperlink{classGameObject}{GameObject}}\{scene\} \};}
+\DoxyCodeLine{25     \mbox{\hyperlink{structCarConf}{CarConf}} car\_conf\{ 500, 30, 1, 1, 0.1 \};}
+\DoxyCodeLine{26     \mbox{\hyperlink{classCarMovement}{CarMovement}}* car\_mover\{ \textcolor{keyword}{new} \mbox{\hyperlink{classCarMovement}{CarMovement}}\{car, car\_conf, check\} \};}
+\DoxyCodeLine{27     \textcolor{keyword}{new} \mbox{\hyperlink{classRenderer}{Renderer}}\{ car, \textcolor{stringliteral}{"{}../assets/images/penguin.png"{}} \};}
+\DoxyCodeLine{28     car\_mover-\/>decelerate = \textcolor{keyword}{false};}
+\DoxyCodeLine{29     \textcolor{keywordflow}{return} \{ car, car\_mover \};}
+\DoxyCodeLine{30 \}}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32 std::vector<GameObject*> create\_cars(\mbox{\hyperlink{classGameObject}{GameObject}}* scene, \textcolor{keywordtype}{int} cnt,}
+\DoxyCodeLine{33     \mbox{\hyperlink{classCamera}{Camera}}*\& camera, \mbox{\hyperlink{classRoadCheck}{RoadCheck}}* check, \textcolor{keywordtype}{int} ind) \{}
+\DoxyCodeLine{34     std::vector<GameObject*> res\{ cnt \};}
+\DoxyCodeLine{35     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < cnt; i++) \{}
+\DoxyCodeLine{36         \mbox{\hyperlink{classGameObject}{GameObject}}* car;}
+\DoxyCodeLine{37         \mbox{\hyperlink{classCarMovement}{CarMovement}}* mover;}
+\DoxyCodeLine{38         std::tie(car, mover) = create\_car(scene, camera, check);}
+\DoxyCodeLine{39         res[i] = car;}
+\DoxyCodeLine{40         \textcolor{keywordflow}{if} (i == ind) \{}
+\DoxyCodeLine{41             \mbox{\hyperlink{classGameObject}{GameObject}}* camera\_go\{ \textcolor{keyword}{new} \mbox{\hyperlink{classGameObject}{GameObject}}\{car\} \};}
+\DoxyCodeLine{42             camera = \textcolor{keyword}{new} \mbox{\hyperlink{classCamera}{Camera}}\{ camera\_go, 10 \};}
+\DoxyCodeLine{43             \mbox{\hyperlink{classGameObject}{GameObject}}* wheel\{ \textcolor{keyword}{new} \mbox{\hyperlink{classGameObject}{GameObject}}\{car\} \};}
+\DoxyCodeLine{44             \textcolor{keyword}{new} \mbox{\hyperlink{classRenderer}{Renderer}}\{ wheel, \textcolor{stringliteral}{"{}../assets/images/wheel.png"{}} \};}
+\DoxyCodeLine{45             \mbox{\hyperlink{classRotor}{Rotor}}* rotor\{ \textcolor{keyword}{new} \mbox{\hyperlink{classRotor}{Rotor}}\{ wheel \} \};}
+\DoxyCodeLine{46             wheel-\/>transform-\/>position = sf::Vector2f\{ 700, -\/700 \};}
+\DoxyCodeLine{47             \textcolor{keyword}{new} \mbox{\hyperlink{classWheelCarInput}{WheelCarInput}}\{ car, rotor, mover \};}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49         \}}
+\DoxyCodeLine{50     \}}
+\DoxyCodeLine{51     \textcolor{keywordflow}{return} res;}
+\DoxyCodeLine{52 \}}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{54 \textcolor{keywordtype}{void} create\_defualt\_scene(\mbox{\hyperlink{classGameObject}{GameObject}}*\& scene,}
+\DoxyCodeLine{55     \mbox{\hyperlink{classCamera}{Camera}}*\& camera,}
+\DoxyCodeLine{56     \mbox{\hyperlink{classServerIO}{ServerIO}}\& sio,}
+\DoxyCodeLine{57     \textcolor{keywordtype}{int} cnt, \textcolor{keywordtype}{int} ind) \{}
+\DoxyCodeLine{58     scene = \textcolor{keyword}{new} \mbox{\hyperlink{classGameObject}{GameObject}}\{ \textcolor{keyword}{nullptr} \};}
+\DoxyCodeLine{59     \mbox{\hyperlink{classGameObject}{GameObject}}* map\_drawer\_go\{ \textcolor{keyword}{new} \mbox{\hyperlink{classGameObject}{GameObject}}\{scene\} \};}
+\DoxyCodeLine{60     \mbox{\hyperlink{classMapDrawer}{MapDrawer}}* map\_drawer1\{ \textcolor{keyword}{new} \mbox{\hyperlink{classMapDrawer}{MapDrawer}}\{}
+\DoxyCodeLine{61         map\_drawer\_go, \textcolor{stringliteral}{"{}../configs/map1.json"{}}, \textcolor{keyword}{false}, sf::LinesStrip\} \};}
+\DoxyCodeLine{62     \mbox{\hyperlink{classMapDrawer}{MapDrawer}}* map\_drawer2\{ \textcolor{keyword}{new} \mbox{\hyperlink{classMapDrawer}{MapDrawer}}\{}
+\DoxyCodeLine{63          map\_drawer\_go, \textcolor{stringliteral}{"{}../configs/map2.json"{}}, \textcolor{keyword}{false}, sf::LinesStrip \} \};}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{65     \mbox{\hyperlink{classGameObject}{GameObject}}* check\_origin\{ \textcolor{keyword}{new} \mbox{\hyperlink{classGameObject}{GameObject}}\{scene\} \};}
+\DoxyCodeLine{66     \mbox{\hyperlink{classRoadCheck}{RoadCheck}}* check\{ \textcolor{keyword}{new} \mbox{\hyperlink{classRoadCheck}{RoadCheck}}\{}
+\DoxyCodeLine{67         check\_origin,}
+\DoxyCodeLine{68         map\_drawer1-\/>coords.points,}
+\DoxyCodeLine{69         map\_drawer2-\/>coords.points}
+\DoxyCodeLine{70         \}}
+\DoxyCodeLine{71     \};}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{73     std::vector<GameObject*> cars = create\_cars(scene, cnt,}
+\DoxyCodeLine{74         camera, check, ind);}
+\DoxyCodeLine{75     \mbox{\hyperlink{classClient}{Client}}* client = \textcolor{keyword}{new} \mbox{\hyperlink{classClient}{Client}}\{ cars[ind], sio, ind, cars \};}
+\DoxyCodeLine{76 }
+\DoxyCodeLine{77     \mbox{\hyperlink{classMapDrawer}{MapDrawer}}* map\_drawer3\{ \textcolor{keyword}{new} \mbox{\hyperlink{classMapDrawer}{MapDrawer}}\{}
+\DoxyCodeLine{78         map\_drawer\_go, \textcolor{stringliteral}{"{}../configs/map3.json"{}}, \textcolor{keyword}{false}, sf::Lines}
+\DoxyCodeLine{79     \} \};}
+\DoxyCodeLine{80 }
+\DoxyCodeLine{81     \mbox{\hyperlink{classGameObject}{GameObject}}* trend\_go\{ \textcolor{keyword}{new} \mbox{\hyperlink{classGameObject}{GameObject}}\{camera-\/>\mbox{\hyperlink{classComponent_a3af8d9227f74082452f5052f55ea18a5}{go}}\} \};}
+\DoxyCodeLine{82     trend\_go-\/>\mbox{\hyperlink{classGameObject_a9edf603be120d5a9221e5c5c962465f8}{transform}}-\/>\mbox{\hyperlink{classTransform_adfea2773a51b524dee1a51fc352bb8ad}{position}} = sf::Vector2f\{ 0, -\/1000 \};}
+\DoxyCodeLine{83     trend\_go-\/>transform-\/>scale = sf::Vector2f\{50, 50\};}
+\DoxyCodeLine{84     \mbox{\hyperlink{classTextRenderer}{TextRenderer}}* trend\{}
+\DoxyCodeLine{85         \textcolor{keyword}{new} \mbox{\hyperlink{classTextRenderer}{TextRenderer}}\{trend\_go, \textcolor{stringliteral}{"{}../assets/fonts/Arial.ttf"{}}\}}
+\DoxyCodeLine{86     \};}
+\DoxyCodeLine{87 }
+\DoxyCodeLine{88     \mbox{\hyperlink{classGameObject}{GameObject}}* checkpoints\_go\{ \textcolor{keyword}{new} \mbox{\hyperlink{classGameObject}{GameObject}}\{scene\} \};}
+\DoxyCodeLine{89     \mbox{\hyperlink{classLoopCounter}{LoopCounter}}* checkpoints\{ \textcolor{keyword}{new} \mbox{\hyperlink{classLoopCounter}{LoopCounter}}\{checkpoints\_go,}
+\DoxyCodeLine{90      map\_drawer3-\/>coords.\mbox{\hyperlink{classLoopCounter_a83b680830f88ed866bd628d9d8878d73}{points}},}
+\DoxyCodeLine{91       cars[ind]-\/>transform, 50, \textcolor{keyword}{true},}
+\DoxyCodeLine{92       trend\} \};}
+\DoxyCodeLine{93 \}}
+\DoxyCodeLine{94 }
+\DoxyCodeLine{95 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

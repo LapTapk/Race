@@ -1,0 +1,81 @@
+\hypertarget{classRoadCheck}{}\doxysection{Road\+Check Class Reference}
+\label{classRoadCheck}\index{RoadCheck@{RoadCheck}}
+
+
+{\ttfamily \#include $<$road\+\_\+check.\+hpp$>$}
+
+
+
+Inheritance diagram for Road\+Check\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=153pt]{classRoadCheck__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Road\+Check\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=327pt]{classRoadCheck__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classRoadCheck_aa39bcb23470bde3fb4f66f4082fc3d7c}{Road\+Check}} (\mbox{\hyperlink{classGameObject}{Game\+Object}} $\ast$\mbox{\hyperlink{classComponent_a3af8d9227f74082452f5052f55ea18a5}{go}}, std\+::vector$<$ sf\+::\+Vector2f $>$ \&\mbox{\hyperlink{classRoadCheck_a94e03f36b030c68f5a0ae1a4c1b6543b}{outborders}}, std\+::vector$<$ sf\+::\+Vector2f $>$ \&\mbox{\hyperlink{classRoadCheck_a8c78b1ce45957858115cbc3f9b4ad3ac}{inborders}})
+\item 
+bool \mbox{\hyperlink{classRoadCheck_a7199b825cc4c10a2ec9506b3310985d2}{is\+\_\+on\+\_\+road}} (\mbox{\hyperlink{classCarMovement}{Car\+Movement}} $\ast$mover)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRoadCheck_a94e03f36b030c68f5a0ae1a4c1b6543b}\label{classRoadCheck_a94e03f36b030c68f5a0ae1a4c1b6543b}} 
+std\+::vector$<$ sf\+::\+Vector2f $>$ \& {\bfseries outborders}
+\begin{DoxyCompactList}\small\item\em Внутренние границы дороги \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classRoadCheck_a8c78b1ce45957858115cbc3f9b4ad3ac}\label{classRoadCheck_a8c78b1ce45957858115cbc3f9b4ad3ac}} 
+std\+::vector$<$ sf\+::\+Vector2f $>$ \& {\bfseries inborders}
+\begin{DoxyCompactList}\small\item\em Внешние границы дороги \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс, отвечающий за проверку нахождения машины в пределах дороги. Проверка осуществляется с помощью проверки пересечения отрезков границ дороги и создаваемого данной сущностью отрезка. Последний создается от позиции родительского объекта до машины. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classRoadCheck_aa39bcb23470bde3fb4f66f4082fc3d7c}\label{classRoadCheck_aa39bcb23470bde3fb4f66f4082fc3d7c}} 
+\index{RoadCheck@{RoadCheck}!RoadCheck@{RoadCheck}}
+\index{RoadCheck@{RoadCheck}!RoadCheck@{RoadCheck}}
+\doxysubsubsection{\texorpdfstring{RoadCheck()}{RoadCheck()}}
+{\footnotesize\ttfamily Road\+Check\+::\+Road\+Check (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classGameObject}{Game\+Object}} $\ast$}]{go,  }\item[{std\+::vector$<$ sf\+::\+Vector2f $>$ \&}]{outborders,  }\item[{std\+::vector$<$ sf\+::\+Vector2f $>$ \&}]{inborders }\end{DoxyParamCaption})}
+
+Конструктор \mbox{\hyperlink{classRoadCheck}{Road\+Check}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em go} & Родительский объект \\
+\hline
+{\em outborders} & Внутренние границы дороги \\
+\hline
+{\em inborders} & Внешние границы дороги \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRoadCheck_a7199b825cc4c10a2ec9506b3310985d2}\label{classRoadCheck_a7199b825cc4c10a2ec9506b3310985d2}} 
+\index{RoadCheck@{RoadCheck}!is\_on\_road@{is\_on\_road}}
+\index{is\_on\_road@{is\_on\_road}!RoadCheck@{RoadCheck}}
+\doxysubsubsection{\texorpdfstring{is\_on\_road()}{is\_on\_road()}}
+{\footnotesize\ttfamily bool Road\+Check\+::is\+\_\+on\+\_\+road (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classCarMovement}{Car\+Movement}} $\ast$}]{mover }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+Состояние, казывающее на то, находится ли машина на дороге 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+engine/include/components/road\+\_\+check.\+hpp\item 
+engine/src/components/road\+\_\+check.\+cpp\end{DoxyCompactItemize}

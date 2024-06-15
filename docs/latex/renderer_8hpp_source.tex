@@ -1,0 +1,28 @@
+\hypertarget{renderer_8hpp_source}{}\doxysection{renderer.\+hpp}
+\label{renderer_8hpp_source}\index{engine/include/components/renderer.hpp@{engine/include/components/renderer.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef RENDERER\_HPP}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define RENDERER\_HPP}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}game\_object.hpp"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <SFML/Graphics.hpp>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}components/camera.hpp"{}}}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{15 \textcolor{keyword}{class }\mbox{\hyperlink{classRenderer}{Renderer}} : \textcolor{keyword}{public} \mbox{\hyperlink{classComponent}{Component}} \{}
+\DoxyCodeLine{16 \textcolor{keyword}{public}:}
+\DoxyCodeLine{23     \mbox{\hyperlink{classRenderer_a987698c953cb7b7188515d028e5dd1f8}{Renderer}}(\mbox{\hyperlink{classGameObject}{GameObject}}* \mbox{\hyperlink{classComponent_a3af8d9227f74082452f5052f55ea18a5}{go}}, std::string path\_to\_img);}
+\DoxyCodeLine{27     \textcolor{keywordtype}{void} \mbox{\hyperlink{classRenderer_aeb5373caa5035e9ff2b9d9f4103712ea}{update}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{28     \textcolor{keywordtype}{float} rotation();}
+\DoxyCodeLine{29     sf::Vector2f position();}
+\DoxyCodeLine{30     sf::Vector2f scale();}
+\DoxyCodeLine{31     \mbox{\hyperlink{classCamera}{Camera}}* camera;}
+\DoxyCodeLine{32 \textcolor{keyword}{private}:}
+\DoxyCodeLine{33     sf::Sprite sprite;}
+\DoxyCodeLine{34     sf::Texture texture;}
+\DoxyCodeLine{35 \};}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,110 @@
+\hypertarget{classServerIO}{}\doxysection{Server\+IO Class Reference}
+\label{classServerIO}\index{ServerIO@{ServerIO}}
+
+
+{\ttfamily \#include $<$server\+\_\+io.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classServerIO_a676773955caa94ff8363f2b37535d430}{read\+\_\+from\+\_\+server}} (tcp\+::socket \&\mbox{\hyperlink{classServerIO_adb43a2643b9e22cb001fff56a170efa8}{socket}})
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+Переменная, которая хранит сообщения от сервера \end{quote}
+\end{DoxyCompactList}\item 
+\mbox{\hyperlink{classServerIO_a9f5faae194634300f93205a9c7a9f5fd}{Server\+IO}} (std\+::string \mbox{\hyperlink{classServerIO_a20ef0da88b6aef22ec9b06c501d7b620}{server\+\_\+ip}}, std\+::string port)
+\item 
+void \mbox{\hyperlink{classServerIO_a3b42ec262243475b66c07a5e4f6fd6b8}{send\+\_\+message}} (std\+::string mes)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classServerIO_a9e5ee29540d72ecd271d82e103e231c0}\label{classServerIO_a9e5ee29540d72ecd271d82e103e231c0}} 
+std\+::string {\bfseries port}
+\item 
+\mbox{\Hypertarget{classServerIO_a44033c28cf13c284ec48374c059cc28b}\label{classServerIO_a44033c28cf13c284ec48374c059cc28b}} 
+boost\+::asio\+::io\+\_\+context {\bfseries io\+\_\+context}
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+Порт, по которому будет осуществлено подключение \end{quote}
+\end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classServerIO_adb43a2643b9e22cb001fff56a170efa8}\label{classServerIO_adb43a2643b9e22cb001fff56a170efa8}} 
+tcp\+::socket {\bfseries socket}
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+Объект испетчер асинхронных операций ввода-\/вывода \end{quote}
+\end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classServerIO_a20ef0da88b6aef22ec9b06c501d7b620}\label{classServerIO_a20ef0da88b6aef22ec9b06c501d7b620}} 
+std\+::string {\bfseries server\+\_\+ip}
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+Объект необходимый для двусторонней связи клиента и сервера \end{quote}
+\end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classServerIO_a518d2817cc0df6e069d3a2020e7250ad}\label{classServerIO_a518d2817cc0df6e069d3a2020e7250ad}} 
+std\+::thread $\ast$ {\bfseries reader\+\_\+thread}
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+IP-\/адрес сервера, по которому будет осуществлено подключение \end{quote}
+\end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classServerIO_af87bc8a8b28a1a4dfa3c2e2202547e3b}\label{classServerIO_af87bc8a8b28a1a4dfa3c2e2202547e3b}} 
+std\+::string {\bfseries reply} \{ \char`\"{}\char`\"{} \}
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+указатель на поток чтения \end{quote}
+\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс, являющийся подключением к серверу Определяет второй поток, отвечающий за асинхронное чтение из буфера сервера 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classServerIO_a9f5faae194634300f93205a9c7a9f5fd}\label{classServerIO_a9f5faae194634300f93205a9c7a9f5fd}} 
+\index{ServerIO@{ServerIO}!ServerIO@{ServerIO}}
+\index{ServerIO@{ServerIO}!ServerIO@{ServerIO}}
+\doxysubsubsection{\texorpdfstring{ServerIO()}{ServerIO()}}
+{\footnotesize\ttfamily Server\+IO\+::\+Server\+IO (\begin{DoxyParamCaption}\item[{std\+::string}]{server\+\_\+ip,  }\item[{std\+::string}]{port }\end{DoxyParamCaption})}
+
+Инициализатор \mbox{\hyperlink{classServerIO}{Server\+IO}} подключения
+
+
+\begin{DoxyParams}{Parameters}
+{\em server\+\_\+ip} & ip-\/адрес сервера \\
+\hline
+{\em port} & порт, который слушает сервер \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classServerIO_a676773955caa94ff8363f2b37535d430}\label{classServerIO_a676773955caa94ff8363f2b37535d430}} 
+\index{ServerIO@{ServerIO}!read\_from\_server@{read\_from\_server}}
+\index{read\_from\_server@{read\_from\_server}!ServerIO@{ServerIO}}
+\doxysubsubsection{\texorpdfstring{read\_from\_server()}{read\_from\_server()}}
+{\footnotesize\ttfamily void Server\+IO\+::read\+\_\+from\+\_\+server (\begin{DoxyParamCaption}\item[{tcp\+::socket \&}]{socket }\end{DoxyParamCaption})}
+
+
+
+\begin{quote}
+Переменная, которая хранит сообщения от сервера \end{quote}
+
+
+Функция чтения сообщений от сервера
+
+
+\begin{DoxyParams}{Parameters}
+{\em socket} & сокет подключения \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classServerIO_a3b42ec262243475b66c07a5e4f6fd6b8}\label{classServerIO_a3b42ec262243475b66c07a5e4f6fd6b8}} 
+\index{ServerIO@{ServerIO}!send\_message@{send\_message}}
+\index{send\_message@{send\_message}!ServerIO@{ServerIO}}
+\doxysubsubsection{\texorpdfstring{send\_message()}{send\_message()}}
+{\footnotesize\ttfamily void Server\+IO\+::send\+\_\+message (\begin{DoxyParamCaption}\item[{std\+::string}]{mes }\end{DoxyParamCaption})}
+
+Функция отправки сообщения на сервер
+
+
+\begin{DoxyParams}{Parameters}
+{\em mes} & сообщение, готовое к отправке серверу \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+engine/include/server\+\_\+io.\+hpp\item 
+engine/src/server\+\_\+io.\+cpp\end{DoxyCompactItemize}

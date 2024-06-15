@@ -1,0 +1,135 @@
+\hypertarget{classClient}{}\doxysection{Client Class Reference}
+\label{classClient}\index{Client@{Client}}
+
+
+{\ttfamily \#include $<$client.\+hpp$>$}
+
+
+
+Inheritance diagram for Client\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=153pt]{classClient__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Client\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=285pt]{classClient__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classClient_aa20ff1dca054d3991ac332bad233b911}\label{classClient_aa20ff1dca054d3991ac332bad233b911}} 
+std\+::string {\bfseries create\+\_\+mes} ()
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+Индекс главного игрока \end{quote}
+\end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classClient_aadbf13854fc7b601138a9249432ef236}{parse\+\_\+coords}} (std\+::string mes)
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+Функция, вызываемая для создания сообщения \end{quote}
+\end{DoxyCompactList}\item 
+\mbox{\hyperlink{classClient_a32c7fd456ed6832faa60064651adacc2}{Client}} (\mbox{\hyperlink{classGameObject}{Game\+Object}} $\ast$\mbox{\hyperlink{classComponent_a3af8d9227f74082452f5052f55ea18a5}{go}}, \mbox{\hyperlink{classServerIO}{Server\+IO}} \&sio, int \mbox{\hyperlink{classClient_a3eb964d53f0bfb55be340eb13c97abef}{this\+\_\+ind}}, std\+::vector$<$ \mbox{\hyperlink{classGameObject}{Game\+Object}} $\ast$ $>$ \mbox{\hyperlink{classClient_aa063a27c5d65d7aff2d214a9379823b0}{players}})
+\item 
+\mbox{\Hypertarget{classClient_a8805b1f9d3c2eaf206043682a3478c5a}\label{classClient_a8805b1f9d3c2eaf206043682a3478c5a}} 
+void {\bfseries set\+\_\+positions} ()
+\item 
+void \mbox{\hyperlink{classClient_a110aba49e2bcc00b2c76f46ff481966e}{update}} () override
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+функция, вызываемая для обновлений координат игроков \end{quote}
+\end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classClient_af1f5fc22339dfd820f26be7157b662e1}\label{classClient_af1f5fc22339dfd820f26be7157b662e1}} 
+\mbox{\hyperlink{classServerIO}{Server\+IO}} \& {\bfseries sio}
+\item 
+\mbox{\Hypertarget{classClient_a89691ec74f109d1640748710685b01d8}\label{classClient_a89691ec74f109d1640748710685b01d8}} 
+std\+::vector$<$ sf\+::\+Vector2f $>$ {\bfseries coords}
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+Обьект, позволяющий осуществлять подключение к серверу \end{quote}
+\end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classClient_aa063a27c5d65d7aff2d214a9379823b0}\label{classClient_aa063a27c5d65d7aff2d214a9379823b0}} 
+std\+::vector$<$ \mbox{\hyperlink{classGameObject}{Game\+Object}} $\ast$ $>$ {\bfseries players}
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+координаты игрока, которые будут переданы серверу \end{quote}
+\end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classClient_a3eb964d53f0bfb55be340eb13c97abef}\label{classClient_a3eb964d53f0bfb55be340eb13c97abef}} 
+int {\bfseries this\+\_\+ind}
+\begin{DoxyCompactList}\small\item\em \begin{quote}
+Обьекты игроков, позиции которых должны быть изменены \end{quote}
+\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс, отвечающий за создание и отправку сообщений серверу Обладает компонентами, определяющими его поведение 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classClient_a32c7fd456ed6832faa60064651adacc2}\label{classClient_a32c7fd456ed6832faa60064651adacc2}} 
+\index{Client@{Client}!Client@{Client}}
+\index{Client@{Client}!Client@{Client}}
+\doxysubsubsection{\texorpdfstring{Client()}{Client()}}
+{\footnotesize\ttfamily Client\+::\+Client (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classGameObject}{Game\+Object}} $\ast$}]{go,  }\item[{\mbox{\hyperlink{classServerIO}{Server\+IO}} \&}]{sio,  }\item[{int}]{this\+\_\+ind,  }\item[{std\+::vector$<$ \mbox{\hyperlink{classGameObject}{Game\+Object}} $\ast$ $>$}]{players }\end{DoxyParamCaption})}
+
+Конструктор класса клиента
+
+
+\begin{DoxyParams}{Parameters}
+{\em go} & Указатель на \mbox{\hyperlink{classGameObject}{Game\+Object}}, который является родительским объектом \\
+\hline
+{\em sio} & Параметр подключения к серверу, позволяющий осуществлять отправку и получение сообщений \\
+\hline
+{\em this\+\_\+ind} & Индекс главного игрока \\
+\hline
+{\em players} & Вектор из обьектов других игроков, учавствующих в игре \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classClient_aadbf13854fc7b601138a9249432ef236}\label{classClient_aadbf13854fc7b601138a9249432ef236}} 
+\index{Client@{Client}!parse\_coords@{parse\_coords}}
+\index{parse\_coords@{parse\_coords}!Client@{Client}}
+\doxysubsubsection{\texorpdfstring{parse\_coords()}{parse\_coords()}}
+{\footnotesize\ttfamily void Client\+::parse\+\_\+coords (\begin{DoxyParamCaption}\item[{std\+::string}]{mes }\end{DoxyParamCaption})}
+
+
+
+\begin{quote}
+Функция, вызываемая для создания сообщения \end{quote}
+
+
+Функция парсинга, полученных от сервера, координат
+
+
+\begin{DoxyParams}{Parameters}
+{\em mes} & строковое сообщение, полученное от сервера, из которого необходимо получить координаты \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classClient_a110aba49e2bcc00b2c76f46ff481966e}\label{classClient_a110aba49e2bcc00b2c76f46ff481966e}} 
+\index{Client@{Client}!update@{update}}
+\index{update@{update}!Client@{Client}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Client\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+\begin{quote}
+функция, вызываемая для обновлений координат игроков \end{quote}
+
+
+
+
+Reimplemented from \mbox{\hyperlink{classComponent}{Component}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+engine/include/components/client.\+hpp\item 
+engine/src/components/client.\+cpp\end{DoxyCompactItemize}

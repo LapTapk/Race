@@ -1,0 +1,28 @@
+\hypertarget{server_8hpp_source}{}\doxysection{server.\+hpp}
+\label{server_8hpp_source}\index{server/server.hpp@{server/server.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef SERVER\_HPP}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define SERVER\_HPP}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <boost/asio.hpp>}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <boost/algorithm/string.hpp>}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{keyword}{using }boost::asio::ip::tcp;}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 std::mutex clients\_mutex; }
+\DoxyCodeLine{13 \textcolor{keyword}{struct }\mbox{\hyperlink{structplayer}{player}}}
+\DoxyCodeLine{14 \{}
+\DoxyCodeLine{15     \textcolor{keywordtype}{int} number\_; }
+\DoxyCodeLine{16     std::shared\_ptr<tcp::socket> \mbox{\hyperlink{structplayer_a7dae018755a718d9b7e0b6cb714a45da}{socket\_}}; }
+\DoxyCodeLine{17     \textcolor{keywordtype}{bool} \mbox{\hyperlink{structplayer_aac38e2069d6f15030552f11eeb6673f1}{is\_ready\_}}; }
+\DoxyCodeLine{24     \mbox{\hyperlink{structplayer_a31028afdca0959f6efc538d93bf9caea}{player}}(std::shared\_ptr<tcp::socket> socket, \textcolor{keywordtype}{int} number);}
+\DoxyCodeLine{25 \};}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27 std::vector<player> players; }
+\DoxyCodeLine{32 std::vector<player>::iterator find\_player\_by\_socket(}
+\DoxyCodeLine{33     std::shared\_ptr<tcp::socket> \&s);}
+\DoxyCodeLine{38 \textcolor{keywordtype}{void} handle\_client(std::shared\_ptr<tcp::socket> socket);}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

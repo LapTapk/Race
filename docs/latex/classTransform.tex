@@ -1,0 +1,78 @@
+\hypertarget{classTransform}{}\doxysection{Transform Class Reference}
+\label{classTransform}\index{Transform@{Transform}}
+
+
+{\ttfamily \#include $<$transform.\+hpp$>$}
+
+
+
+Inheritance diagram for Transform\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=153pt]{classTransform__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Transform\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=223pt]{classTransform__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTransform_aa2fd84cea8d2314a10978d227da1de8d}\label{classTransform_aa2fd84cea8d2314a10978d227da1de8d}} 
+sf\+::\+Vector2f {\bfseries global\+\_\+pos} ()
+\begin{DoxyCompactList}\small\item\em Позиция в пространстве относительно сцены \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTransform_ad8623f49bed752b43de95f3a37b7f4d0}\label{classTransform_ad8623f49bed752b43de95f3a37b7f4d0}} 
+sf\+::\+Vector2f {\bfseries global\+\_\+scale} ()
+\begin{DoxyCompactList}\small\item\em Размер относительно сцены \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTransform_a681ce36f836d620a0e321eb12b7596ef}\label{classTransform_a681ce36f836d620a0e321eb12b7596ef}} 
+float {\bfseries global\+\_\+rot} ()
+\begin{DoxyCompactList}\small\item\em Ориентация относительно сцены \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classTransform_a89f354b7910c6b2935f1dc72507c6cb5}{Transform}} (\mbox{\hyperlink{classGameObject}{Game\+Object}} $\ast$\mbox{\hyperlink{classComponent_a3af8d9227f74082452f5052f55ea18a5}{go}})
+\item 
+\mbox{\Hypertarget{classTransform_a23e3c90a219af8b939fe666497b2f437}\label{classTransform_a23e3c90a219af8b939fe666497b2f437}} 
+sf\+::\+Vector2f {\bfseries forward} ()
+\begin{DoxyCompactList}\small\item\em Вектор в базисе, присущем компоненту \mbox{\hyperlink{classTransform}{Transform}} сцены, который соответствует вектору \{0, 1\} в локальном базисе \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTransform_adfea2773a51b524dee1a51fc352bb8ad}\label{classTransform_adfea2773a51b524dee1a51fc352bb8ad}} 
+sf\+::\+Vector2f {\bfseries position} \{sf\+::\+Vector2f(0, 0)\}
+\begin{DoxyCompactList}\small\item\em Позиция в пространстве относительно родительского объекта родительского объекта компонента \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTransform_a8d22ad5e453bb6d56748b3ba3f5e49be}\label{classTransform_a8d22ad5e453bb6d56748b3ba3f5e49be}} 
+sf\+::\+Vector2f {\bfseries scale} = sf\+::\+Vector2f(1, 1)
+\begin{DoxyCompactList}\small\item\em Размер относительно родительского объекта родительского объекта компонента \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTransform_ac67a2ceb0bd5a73a9360dbcfec232bb3}\label{classTransform_ac67a2ceb0bd5a73a9360dbcfec232bb3}} 
+float {\bfseries rotation} = 0
+\begin{DoxyCompactList}\small\item\em Ориентация в градусах отсносительно родительского объекта родительского объекта компонента \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Компонент, отвечающий за хранение и вычисления информации о положении, ориентации и размере в игровом пространстве 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classTransform_a89f354b7910c6b2935f1dc72507c6cb5}\label{classTransform_a89f354b7910c6b2935f1dc72507c6cb5}} 
+\index{Transform@{Transform}!Transform@{Transform}}
+\index{Transform@{Transform}!Transform@{Transform}}
+\doxysubsubsection{\texorpdfstring{Transform()}{Transform()}}
+{\footnotesize\ttfamily Transform\+::\+Transform (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classGameObject}{Game\+Object}} $\ast$}]{go }\end{DoxyParamCaption})}
+
+Конструктор \mbox{\hyperlink{classTransform}{Transform}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em go} & Родительский объект \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+engine/include/components/transform.\+hpp\item 
+engine/src/components/transform.\+cpp\end{DoxyCompactItemize}

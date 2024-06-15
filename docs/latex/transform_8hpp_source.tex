@@ -1,0 +1,26 @@
+\hypertarget{transform_8hpp_source}{}\doxysection{transform.\+hpp}
+\label{transform_8hpp_source}\index{engine/include/components/transform.hpp@{engine/include/components/transform.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef TRANSFORM\_HPP}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define TRANSFORM\_HPP}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <SFML/Graphics.hpp>}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}game\_object.hpp"{}}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{13 \textcolor{keyword}{class }\mbox{\hyperlink{classTransform}{Transform}} : \textcolor{keyword}{public} \mbox{\hyperlink{classComponent}{Component}} \{}
+\DoxyCodeLine{14 \textcolor{keyword}{public}:}
+\DoxyCodeLine{15     sf::Vector2f \mbox{\hyperlink{classTransform_adfea2773a51b524dee1a51fc352bb8ad}{position}}\{sf::Vector2f(0, 0)\};}
+\DoxyCodeLine{16     sf::Vector2f \mbox{\hyperlink{classTransform_aa2fd84cea8d2314a10978d227da1de8d}{global\_pos}}();}
+\DoxyCodeLine{17     sf::Vector2f \mbox{\hyperlink{classTransform_a8d22ad5e453bb6d56748b3ba3f5e49be}{scale}} = sf::Vector2f(1, 1);}
+\DoxyCodeLine{18     sf::Vector2f \mbox{\hyperlink{classTransform_ad8623f49bed752b43de95f3a37b7f4d0}{global\_scale}}();}
+\DoxyCodeLine{19     \textcolor{keywordtype}{float} \mbox{\hyperlink{classTransform_ac67a2ceb0bd5a73a9360dbcfec232bb3}{rotation}} = 0;}
+\DoxyCodeLine{20     \textcolor{keywordtype}{float} \mbox{\hyperlink{classTransform_a681ce36f836d620a0e321eb12b7596ef}{global\_rot}}();}
+\DoxyCodeLine{26     \mbox{\hyperlink{classTransform_a89f354b7910c6b2935f1dc72507c6cb5}{Transform}}(\mbox{\hyperlink{classGameObject}{GameObject}}* \mbox{\hyperlink{classComponent_a3af8d9227f74082452f5052f55ea18a5}{go}});}
+\DoxyCodeLine{27     sf::Vector2f \mbox{\hyperlink{classTransform_a23e3c90a219af8b939fe666497b2f437}{forward}}();}
+\DoxyCodeLine{28 \};}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}
