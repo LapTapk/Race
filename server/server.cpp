@@ -8,7 +8,7 @@
 #include <boost/algorithm/string.hpp>
 #include "server.hpp"
 using boost::asio::ip::tcp;
-
+int number = 1;
 player::player(std::shared_ptr<tcp::socket> socket, int number) : socket_(socket), number_(number), is_ready_{false}{}
 std::vector<player>::iterator find_player_by_socket(
     std::shared_ptr<tcp::socket> &s)
@@ -28,11 +28,13 @@ void handle_client(std::shared_ptr<tcp::socket> socket)
     try
     {
         char data[1024];
+        
         for (;;)
-        {
+        {   
+            std::fill(std::begin(data), std::end(data), 0);
             std::size_t length = socket->read_some(
                 boost::asio::buffer(data));
-
+            std::cout << data << std::endl;
             player &sender{*find_player_by_socket(socket)};
             int num{sender.number_};
             bool are_all_ready{true};
@@ -58,8 +60,9 @@ void handle_client(std::shared_ptr<tcp::socket> socket)
                             std::to_string(players.size()) +
                             " " + std::to_string(player.number_)};
                         boost::asio::write(*player.socket_,
-                                           boost::asio::buffer(mes));
+                                           boost::asio::buffer(mes));                   
                     }
+                    std::fill(std::begin(data), std::end(data), 0);
                 }
             }
             else if (length > 0)
@@ -75,11 +78,10 @@ void handle_client(std::shared_ptr<tcp::socket> socket)
                     std::string mes{
                         std::to_string(num) +
                         " " + data};
-
-                    std::cout << mes << std::endl;
                     boost::asio::write(*player.socket_,
                                        boost::asio::buffer(mes));
                 }
+                std::fill(std::begin(data), std::end(data), 0);
             }
         }
     }
@@ -88,6 +90,7 @@ void handle_client(std::shared_ptr<tcp::socket> socket)
         std::cerr << "Exception in thread: " << e.what() << "\n";
         std::lock_guard<std::mutex> lock(clients_mutex);
         players.erase(find_player_by_socket(socket));
+        number--;
     }
 }
 
@@ -103,7 +106,6 @@ int main(int argc, char *argv[])
 
         boost::asio::io_context io_context;
         tcp::acceptor acceptor(io_context, tcp::endpoint(tcp::v4(), std::atoi(argv[1])));
-        int number = 1;
         for (;;)
         {
             auto socket = std::make_shared<tcp::socket>(io_context);
@@ -112,7 +114,6 @@ int main(int argc, char *argv[])
             players.push_back(player(socket, number));
             std::cout << "new client connected" << std::endl;
             number++;
-
             std::thread(handle_client, socket).detach();
         }
     }
